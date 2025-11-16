@@ -1,58 +1,633 @@
-
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="id">
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Index - MyPage Bootstrap Template</title>
-  <meta name="description" content="">
-  <meta name="keywords" content="">
-
-  <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <title>Fadillah Al Musyaffa - Portfolio</title>
+  <meta name="description" content="Portfolio Fadillah Al Musyaffa - Fresh Graduate Matematika UIN Walisongo Semarang">
+  <meta name="keywords" content="Fadillah Al Musyaffa, Matematika, Data Analysis, Portfolio">
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.1/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/glightbox/3.2.0/css/glightbox.min.css" rel="stylesheet">
 
-  <!-- Main CSS File -->
-  <link href="assets/css/main.css" rel="stylesheet">
+  <style>
+    :root {
+      --background-color: #ffffff;
+      --default-color: #272829;
+      --heading-color: #45505b;
+      --accent-color: #0563bb;
+      --surface-color: #ffffff;
+      --contrast-color: #ffffff;
+    }
 
-  <!-- =======================================================
-  * Template Name: MyPage
-  * Template URL: https://bootstrapmade.com/mypage-bootstrap-personal-template/
-  * Updated: Sep 20 2025 with Bootstrap v5.3.8
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      color: var(--default-color);
+      background-color: var(--background-color);
+      font-family: 'Roboto', sans-serif;
+    }
+
+    a {
+      color: var(--accent-color);
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    a:hover {
+      color: #0678e3;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      color: var(--heading-color);
+      font-family: 'Raleway', sans-serif;
+    }
+
+    /* Header */
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: 300px;
+      transition: all ease-in-out 0.5s;
+      z-index: 997;
+      padding: 0 15px;
+      background-color: #040b14;
+      overflow-y: auto;
+    }
+
+    .header .profile-img img {
+      margin: 15px auto;
+      display: block;
+      width: 120px;
+      border: 8px solid #2c2f3f;
+      border-radius: 50%;
+    }
+
+    .header .logo {
+      line-height: 1;
+      margin: 0 0 15px 0;
+    }
+
+    .header .logo h1 {
+      font-size: 24px;
+      margin: 0;
+      padding: 0;
+      font-weight: 700;
+      color: #fff;
+      text-align: center;
+    }
+
+    .header .social-links {
+      margin: 0 0 20px 0;
+      text-align: center;
+    }
+
+    .header .social-links a {
+      font-size: 16px;
+      display: inline-block;
+      background: #212431;
+      color: #fff;
+      line-height: 1;
+      padding: 8px 0;
+      margin: 0 2px;
+      border-radius: 50%;
+      text-align: center;
+      width: 36px;
+      height: 36px;
+      transition: 0.3s;
+    }
+
+    .header .social-links a:hover {
+      background: var(--accent-color);
+      color: #fff;
+    }
+
+    /* Navigation */
+    .navmenu {
+      padding: 0;
+    }
+
+    .navmenu ul {
+      list-style: none;
+      padding: 0 0 20px 0;
+    }
+
+    .navmenu a {
+      display: flex;
+      align-items: center;
+      color: #a8a9b4;
+      padding: 10px 18px;
+      margin-bottom: 8px;
+      transition: 0.3s;
+      font-size: 15px;
+      border-radius: 50px;
+    }
+
+    .navmenu a i {
+      font-size: 20px;
+      padding-right: 8px;
+      color: #6f7180;
+    }
+
+    .navmenu a:hover,
+    .navmenu .active {
+      color: #fff;
+      background: var(--accent-color);
+    }
+
+    .navmenu a:hover i,
+    .navmenu .active i {
+      color: #fff;
+    }
+
+    /* Main */
+    .main {
+      margin-left: 300px;
+    }
+
+    @media (max-width: 1199px) {
+      .header {
+        left: -300px;
+      }
+      .main {
+        margin-left: 0;
+      }
+    }
+
+    /* Hero Section */
+    .hero {
+      width: 100%;
+      min-height: 100vh;
+      position: relative;
+      padding: 80px 0;
+      display: flex;
+      align-items: center;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    }
+
+    .hero .hero-content {
+      color: #fff;
+    }
+
+    .hero h1 {
+      margin: 0 0 20px 0;
+      font-size: 48px;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .hero .accent-text {
+      color: #ffd700;
+    }
+
+    .hero p {
+      color: rgba(255, 255, 255, 0.9);
+      margin-bottom: 30px;
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    .hero .btn-primary {
+      padding: 12px 30px;
+      border-radius: 50px;
+      background: #fff;
+      color: #667eea;
+      font-weight: 600;
+      transition: 0.3s;
+      border: none;
+      margin-right: 15px;
+    }
+
+    .hero .btn-primary:hover {
+      background: #ffd700;
+      color: #667eea;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+
+    .hero .btn-secondary {
+      padding: 12px 30px;
+      border-radius: 50px;
+      background: transparent;
+      color: #fff;
+      font-weight: 600;
+      transition: 0.3s;
+      border: 2px solid #fff;
+    }
+
+    .hero .btn-secondary:hover {
+      background: #fff;
+      color: #667eea;
+    }
+
+    .hero-image img {
+      width: 100%;
+      height: auto;
+      border-radius: 20px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+    }
+
+    /* About Section */
+    .about {
+      padding: 80px 0;
+    }
+
+    .about .intro-header h1 {
+      font-size: 42px;
+      margin-bottom: 15px;
+    }
+
+    .about .subtitle {
+      font-size: 20px;
+      color: var(--accent-color);
+      margin-bottom: 40px;
+    }
+
+    .about .profile-image-container img {
+      width: 100%;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+
+    .about .location {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin: 15px 0;
+      color: #666;
+    }
+
+    .about .status {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: #28a745;
+    }
+
+    .about .status-indicator {
+      width: 10px;
+      height: 10px;
+      background: #28a745;
+      border-radius: 50%;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.5; }
+    }
+
+    .about .lead-text {
+      font-size: 20px;
+      line-height: 1.8;
+      margin-bottom: 20px;
+      color: #555;
+    }
+
+    /* Skills Section */
+    .skills {
+      padding: 80px 0;
+      background: #f8f9fa;
+    }
+
+    .section-title {
+      text-align: center;
+      padding-bottom: 60px;
+    }
+
+    .section-title h2 {
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      position: relative;
+      display: inline-block;
+    }
+
+    .section-title h2::after {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 50px;
+      height: 3px;
+      background: var(--accent-color);
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .skill-category {
+      margin-bottom: 40px;
+    }
+
+    .category-header h3 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .category-subtitle {
+      color: #666;
+      margin-bottom: 25px;
+    }
+
+    .skill-row {
+      margin-bottom: 20px;
+    }
+
+    .skill-info {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 8px;
+    }
+
+    .skill-name {
+      font-weight: 500;
+    }
+
+    .skill-percentage {
+      color: var(--accent-color);
+      font-weight: 600;
+    }
+
+    .progress {
+      height: 10px;
+      border-radius: 10px;
+      background: #e9ecef;
+    }
+
+    .progress-bar {
+      background: linear-gradient(90deg, var(--accent-color), #0678e3);
+      border-radius: 10px;
+      transition: width 1.5s ease;
+    }
+
+    /* Resume Section */
+    .resume {
+      padding: 80px 0;
+    }
+
+    .timeline-item {
+      padding-left: 30px;
+      position: relative;
+      margin-bottom: 40px;
+    }
+
+    .timeline-dot {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: var(--accent-color);
+      border: 3px solid #fff;
+      box-shadow: 0 0 0 3px var(--accent-color);
+    }
+
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: 7px;
+      top: 20px;
+      bottom: -30px;
+      width: 2px;
+      background: #e9ecef;
+    }
+
+    .timeline-item:last-child::before {
+      display: none;
+    }
+
+    .timeline-year {
+      display: inline-block;
+      padding: 4px 12px;
+      background: var(--accent-color);
+      color: #fff;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .timeline-content h3 {
+      font-size: 22px;
+      margin-bottom: 5px;
+    }
+
+    .timeline-content h4 {
+      font-size: 16px;
+      color: #666;
+      margin-bottom: 15px;
+    }
+
+    .achievement-tag {
+      display: inline-block;
+      padding: 5px 15px;
+      background: #f0f0f0;
+      border-radius: 20px;
+      font-size: 13px;
+      margin: 5px 5px 0 0;
+      color: #666;
+    }
+
+    /* Contact Section */
+    .contact {
+      padding: 80px 0;
+      background: #f8f9fa;
+    }
+
+    .info-item {
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      margin-bottom: 30px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    }
+
+    .info-icon {
+      font-size: 32px;
+      color: var(--accent-color);
+      margin-bottom: 15px;
+    }
+
+    .detail-item {
+      display: flex;
+      align-items: start;
+      gap: 15px;
+      padding: 20px;
+      background: #fff;
+      border-radius: 10px;
+      margin-bottom: 15px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+    }
+
+    .detail-icon {
+      font-size: 24px;
+      color: var(--accent-color);
+    }
+
+    .detail-content {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .detail-label {
+      font-size: 13px;
+      color: #666;
+      margin-bottom: 5px;
+    }
+
+    .detail-value {
+      font-weight: 600;
+      color: #333;
+    }
+
+    .form-wrapper {
+      background: #fff;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 500;
+      color: #333;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 12px 15px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      font-size: 15px;
+      transition: 0.3s;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--accent-color);
+      box-shadow: 0 0 0 3px rgba(5, 99, 187, 0.1);
+    }
+
+    .submit-btn {
+      background: var(--accent-color);
+      color: #fff;
+      padding: 12px 40px;
+      border: none;
+      border-radius: 50px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.3s;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .submit-btn:hover {
+      background: #0678e3;
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(5, 99, 187, 0.3);
+    }
+
+    /* Footer */
+    .footer {
+      background: #040b14;
+      color: #fff;
+      padding: 30px 0;
+      text-align: center;
+    }
+
+    .footer .sitename {
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+
+    .footer .social-links a {
+      font-size: 18px;
+      display: inline-block;
+      background: #212431;
+      color: #fff;
+      line-height: 1;
+      padding: 8px 0;
+      margin: 0 4px;
+      border-radius: 50%;
+      text-align: center;
+      width: 40px;
+      height: 40px;
+      transition: 0.3s;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .footer .social-links a:hover {
+      background: var(--accent-color);
+    }
+
+    /* Scroll Top */
+    .scroll-top {
+      position: fixed;
+      visibility: hidden;
+      opacity: 0;
+      right: 15px;
+      bottom: 15px;
+      z-index: 99999;
+      background: var(--accent-color);
+      width: 44px;
+      height: 44px;
+      border-radius: 50px;
+      transition: all 0.4s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+    }
+
+    .scroll-top:hover {
+      background: #0678e3;
+      color: #fff;
+    }
+
+    .scroll-top.active {
+      visibility: visible;
+      opacity: 1;
+    }
+  </style>
 </head>
 
-<body class="index-page">
+<body>
 
-  <header id="header" class="header dark-background d-flex flex-column justify-content-between">
-    <i class="header-toggle d-xl-none bi bi-list"></i>
-
+  <header id="header" class="header d-flex flex-column justify-content-between">
     <div class="header-top">
       <div class="profile-img">
-        <img src="assets/img/profile/profile-square-14.webp" alt="" class="img-fluid">
+        <img src="https://via.placeholder.com/120x120?text=FAM" alt="Fadillah Al Musyaffa">
       </div>
 
       <a href="index.html" class="logo d-flex align-items-center justify-content-center">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="assets/img/logo.webp" alt=""> -->
         <h1 class="sitename">Fadillah Al Musyaffa</h1>
       </a>
-
     </div>
 
     <nav id="navmenu" class="navmenu">
@@ -60,35 +635,14 @@
         <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i>Home</a></li>
         <li><a href="#about"><i class="bi bi-person navicon"></i> About</a></li>
         <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i> Resume</a></li>
-        <li><a href="#portfolio"><i class="bi bi-images navicon"></i> Portfolio</a></li>
-        <li><a href="#services"><i class="bi bi-hdd-stack navicon"></i> Services</a></li>
-        <li class="dropdown"><a href="#"><i class="bi bi-menu-button navicon"></i> <span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-          <ul>
-            <li><a href="#">Dropdown 1</a></li>
-            <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-              <ul>
-                <li><a href="#">Deep Dropdown 1</a></li>
-                <li><a href="#">Deep Dropdown 2</a></li>
-                <li><a href="#">Deep Dropdown 3</a></li>
-                <li><a href="#">Deep Dropdown 4</a></li>
-                <li><a href="#">Deep Dropdown 5</a></li>
-              </ul>
-            </li>
-            <li><a href="#">Dropdown 2</a></li>
-            <li><a href="#">Dropdown 3</a></li>
-            <li><a href="#">Dropdown 4</a></li>
-          </ul>
-        </li>
+        <li><a href="#skills"><i class="bi bi-hdd-stack navicon"></i> Skills</a></li>
         <li><a href="#contact"><i class="bi bi-envelope navicon"></i> Contact</a></li>
       </ul>
     </nav>
 
     <div class="social-links text-center">
-      <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
-      <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-      <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-      <a href="#" class="google-plus"><i class="bi bi-skype"></i></a>
-      <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+      <a href="https://linkedin.com/in/fadillah-al-musyaffa" target="_blank"><i class="bi bi-linkedin"></i></a>
+      <a href="https://instagram.com/fdlh.almsyffa" target="_blank"><i class="bi bi-instagram"></i></a>
     </div>
   </header>
 
@@ -96,73 +650,49 @@
 
     <!-- Hero Section -->
     <section id="hero" class="hero section">
-
       <div class="container" data-aos="fade-up" data-aos-delay="100">
-
         <div class="row align-items-center">
           <div class="col-lg-6 order-2 order-lg-1">
             <div class="hero-content">
               <h1 data-aos="fade-up" data-aos-delay="200">
-                Matematika
-                <span class="accent-text">UIN Walisongo Semarang</span>
+                Fresh Graduate
+                <span class="accent-text">Matematika</span>
               </h1>
               <p class="hero-description" data-aos="fade-up" data-aos-delay="300">
-                Crafting meaningful digital experiences through thoughtful design and innovative solutions. I blend creativity with strategy to bring brands to life and connect with audiences on a deeper level.
+                Lulusan S1 Matematika UIN Walisongo Semarang dengan passion di bidang analisis data dan pengolahan data. Memiliki pengalaman di Pos Indonesia dan Bulog dalam verifikasi data dan administrasi.
               </p>
               <div class="hero-actions" data-aos="fade-up" data-aos-delay="400">
-                <a href="#portfolio" class="btn-primary">View My Work</a>
-                <a href="#contact" class="btn-secondary">Get In Touch</a>
-              </div>
-              <div class="hero-stats" data-aos="fade-up" data-aos-delay="500">
+                <a href="#about" class="btn-primary">Tentang Saya</a>
+                <a href="#contact" class="btn-secondary">Hubungi Saya</a>
               </div>
             </div>
           </div>
 
           <div class="col-lg-6 order-1 order-lg-2">
             <div class="hero-image" data-aos="fade-up" data-aos-delay="300">
-              <div class="image-wrapper">
-                <img src="assets/img/profile/profile-square-13.webp" alt="Fadillah Al Musyaffa Portfolio" class="img-fluid main-image">
-                <div class="floating-card card-1" data-aos="fade-up" data-aos-delay="600">
-                  <i class="bi bi-palette"></i>
-                  <span>UI/UX Design</span>
-                </div>
-                <div class="floating-card card-2" data-aos="fade-up" data-aos-delay="700">
-                  <i class="bi bi-code-square"></i>
-                  <span>Web Development</span>
-                </div>
-                <div class="floating-card card-3" data-aos="fade-up" data-aos-delay="800">
-                  <i class="bi bi-camera"></i>
-                  <span>Photography</span>
-                </div>
-              </div>
+              <img src="https://via.placeholder.com/600x800?text=Foto+Wisuda+2" alt="Fadillah Al Musyaffa" class="img-fluid">
             </div>
           </div>
         </div>
-
       </div>
-
     </section><!-- /Hero Section -->
 
     <!-- About Section -->
     <section id="about" class="about section">
-
       <div class="container" data-aos="fade-up" data-aos-delay="100">
-
         <div class="row justify-content-center">
           <div class="col-lg-10">
-
             <div class="intro-header text-center" data-aos="fade-up" data-aos-delay="150">
-              <h1>Hi, I'm Fadillah Al Musyaffa</h1>
-              <p class="subtitle">Digital Product Designer &amp; Creative Strategist</p>
+              <h1>Hi, Saya Fadillah Al Musyaffa</h1>
+              <p class="subtitle">Fresh Graduate Matematika | Data Enthusiast</p>
             </div>
 
             <div class="main-content-wrapper">
               <div class="row align-items-start">
-
                 <div class="col-lg-4" data-aos="fade-right" data-aos-delay="200">
                   <div class="profile-section">
                     <div class="profile-image-container">
-                      <img src="assets/img/profile/profile-square-15.webp" class="img-fluid" alt="Sarah Chen">
+                      <img src="https://via.placeholder.com/400x600?text=Foto+Wisuda+3" class="img-fluid" alt="Fadillah Al Musyaffa">
                     </div>
                     <div class="profile-meta">
                       <div class="location">
@@ -171,7 +701,7 @@
                       </div>
                       <div class="status">
                         <div class="status-indicator"></div>
-                        <span>Available for projects</span>
+                        <span>Terbuka untuk Peluang Kerja</span>
                       </div>
                     </div>
                   </div>
@@ -179,375 +709,39 @@
 
                 <div class="col-lg-8" data-aos="fade-left" data-aos-delay="250">
                   <div class="content-area">
-
                     <div class="story-block">
-                      <p class="lead-text">I craft digital experiences that bridge the gap between user needs and business goals. With 7 years of experience in product design, I've helped startups and Fortune 500 companies create meaningful connections with their users.</p>
+                      <p class="lead-text">Saya lulusan S1 Program Studi Matematika UIN Walisongo Semarang dengan kemampuan analisis, ketelitian, dan komunikasi yang baik, serta memiliki manajemen waktu yang teratur.</p>
 
-                      <p>My design philosophy centers around empathy, iteration, and impact. I believe great design isn't just about aesthetics—it's about solving real problems and creating value for both users and businesses.</p>
+                      <p>Terbiasa bekerja secara individu maupun dalam tim, mampu mengambil inisiatif, dan bertanggung jawab terhadap setiap tugas yang diberikan. Saya memiliki sikap jujur, disiplin, cepat beradaptasi, serta antusias mempelajari hal-hal baru untuk memberikan kontribusi positif di lingkungan kerja.</p>
+
+                      <p>Saya memiliki minat pada bidang analisis data, pengolahan data, dan administrasi, serta bersemangat untuk terus mengembangkan kemampuan profesional guna mendukung kinerja dan tujuan perusahaan.</p>
                     </div>
-
-                    <div class="expertise-grid">
-                      <div class="expertise-item" data-aos="zoom-in" data-aos-delay="300">
-                        <div class="expertise-icon">
-                          <i class="bi bi-lightbulb"></i>
-                        </div>
-                        <div class="expertise-content">
-                          <h4>Product Strategy</h4>
-                          <p>User research, journey mapping, and strategic design thinking</p>
-                        </div>
-                      </div>
-
-                      <div class="expertise-item" data-aos="zoom-in" data-aos-delay="350">
-                        <div class="expertise-icon">
-                          <i class="bi bi-phone"></i>
-                        </div>
-                        <div class="expertise-content">
-                          <h4>Mobile &amp; Web Design</h4>
-                          <p>Responsive interfaces and seamless user experiences</p>
-                        </div>
-                      </div>
-
-                      <div class="expertise-item" data-aos="zoom-in" data-aos-delay="400">
-                        <div class="expertise-icon">
-                          <i class="bi bi-graph-up"></i>
-                        </div>
-                        <div class="expertise-content">
-                          <h4>Design Systems</h4>
-                          <p>Scalable component libraries and brand consistency</p>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="philosophy-quote" data-aos="fade-up" data-aos-delay="450">
-                      <div class="quote-mark">"</div>
-                      <p>Good design is not about perfection—it's about understanding, empathy, and continuous learning from the people who use what we create.</p>
-                    </div>
-
-                  </div>
-                </div>
-
-              </div>
-            </div>
-
-            <div class="bottom-section" data-aos="fade-up" data-aos-delay="500">
-              <div class="row align-items-center">
-                <div class="col-lg-6">
-                  <div class="collaboration-text">
-                    <h3>Let's create something amazing together</h3>
-                    <p>Whether you're looking to redesign an existing product or build something completely new, I'd love to explore how we can bring your vision to life.</p>
-                  </div>
-                </div>
-                <div class="col-lg-6">
-                  <div class="action-buttons">
-                    <a href="#portfolio" class="btn-custom primary">View Case Studies</a>
-                    <a href="#contact" class="btn-custom secondary">Start a Project</a>
                   </div>
                 </div>
               </div>
             </div>
-
           </div>
         </div>
-
       </div>
-
     </section><!-- /About Section -->
-
-    <!-- Stats Section -->
-    <section id="stats" class="stats section light-background">
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row justify-content-center">
-          <div class="col-lg-10">
-
-            <div class="stats-grid">
-              <div class="stat-item" data-aos="fade-up" data-aos-delay="200">
-                <div class="stat-number">
-                  <span data-purecounter-start="0" data-purecounter-end="127" data-purecounter-duration="1" class="purecounter"></span>
-                </div>
-                <p class="stat-label">Voluptas nulla pariatur</p>
-              </div>
-
-              <div class="stat-item" data-aos="fade-up" data-aos-delay="300">
-                <div class="stat-number">
-                  <span data-purecounter-start="0" data-purecounter-end="89" data-purecounter-duration="1" class="purecounter"></span>K
-                </div>
-                <p class="stat-label">Nostrum exercitationem</p>
-              </div>
-
-              <div class="stat-item" data-aos="fade-up" data-aos-delay="400">
-                <div class="stat-number">
-                  <span data-purecounter-start="0" data-purecounter-end="234" data-purecounter-duration="1" class="purecounter"></span>+
-                </div>
-                <p class="stat-label">Temporibus autem</p>
-              </div>
-            </div>
-
-            <div class="achievements-row" data-aos="fade-up" data-aos-delay="500">
-              <div class="achievement">
-                <div class="achievement-icon">
-                  <i class="bi bi-trophy"></i>
-                </div>
-                <div class="achievement-content">
-                  <h4>Excellence Award</h4>
-                  <p>Ut enim ad minima veniam quis</p>
-                </div>
-              </div>
-
-              <div class="achievement">
-                <div class="achievement-icon">
-                  <i class="bi bi-star"></i>
-                </div>
-                <div class="achievement-content">
-                  <h4>Recognition</h4>
-                  <p>Sed do eiusmod tempor incididunt</p>
-                </div>
-              </div>
-
-              <div class="achievement">
-                <div class="achievement-icon">
-                  <i class="bi bi-gem"></i>
-                </div>
-                <div class="achievement-content">
-                  <h4>Innovation</h4>
-                  <p>Lorem ipsum dolor sit amet consectetur</p>
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-
-      </div>
-
-    </section><!-- /Stats Section -->
-
-    <!-- Skills Section -->
-    <section id="skills" class="skills section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Skills</h2>
-        <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
-      </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row justify-content-center">
-          <div class="col-lg-10">
-            <div class="intro-content text-center mb-5" data-aos="fade-up" data-aos-delay="150">
-              <p class="lead-text">Mastery achieved through continuous exploration and dedicated refinement of craft</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-lg-8">
-            <div class="skills-container">
-
-              <div class="skill-category skills-animation" data-aos="fade-up" data-aos-delay="200">
-                <div class="category-header">
-                  <h3 class="category-title">Technical Expertise</h3>
-                  <p class="category-subtitle">Core development and technical skills</p>
-                </div>
-                <div class="skills-list">
-                  <div class="skill-row">
-                    <div class="skill-info">
-                      <span class="skill-name">Full-Stack Development</span>
-                      <span class="skill-percentage">92%</span>
-                    </div>
-                    <div class="progress">
-                      <div class="progress-bar" role="progressbar" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                  </div>
-                  <div class="skill-row">
-                    <div class="skill-info">
-                      <span class="skill-name">Cloud Architecture</span>
-                      <span class="skill-percentage">88%</span>
-                    </div>
-                    <div class="progress">
-                      <div class="progress-bar" role="progressbar" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                  </div>
-                  <div class="skill-row">
-                    <div class="skill-info">
-                      <span class="skill-name">Database Design</span>
-                      <span class="skill-percentage">85%</span>
-                    </div>
-                    <div class="progress">
-                      <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="skill-category skills-animation" data-aos="fade-up" data-aos-delay="250">
-                <div class="category-header">
-                  <h3 class="category-title">Creative Design</h3>
-                  <p class="category-subtitle">Visual and user experience design</p>
-                </div>
-                <div class="skills-list">
-                  <div class="skill-row">
-                    <div class="skill-info">
-                      <span class="skill-name">UI/UX Design</span>
-                      <span class="skill-percentage">94%</span>
-                    </div>
-                    <div class="progress">
-                      <div class="progress-bar" role="progressbar" aria-valuenow="94" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                  </div>
-                  <div class="skill-row">
-                    <div class="skill-info">
-                      <span class="skill-name">Brand Identity</span>
-                      <span class="skill-percentage">86%</span>
-                    </div>
-                    <div class="progress">
-                      <div class="progress-bar" role="progressbar" aria-valuenow="86" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                  </div>
-                  <div class="skill-row">
-                    <div class="skill-info">
-                      <span class="skill-name">Motion Graphics</span>
-                      <span class="skill-percentage">78%</span>
-                    </div>
-                    <div class="progress">
-                      <div class="progress-bar" role="progressbar" aria-valuenow="78" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="skill-category skills-animation" data-aos="fade-up" data-aos-delay="300">
-                <div class="category-header">
-                  <h3 class="category-title">Strategic Leadership</h3>
-                  <p class="category-subtitle">Management and business acumen</p>
-                </div>
-                <div class="skills-list">
-                  <div class="skill-row">
-                    <div class="skill-info">
-                      <span class="skill-name">Project Management</span>
-                      <span class="skill-percentage">90%</span>
-                    </div>
-                    <div class="progress">
-                      <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                  </div>
-                  <div class="skill-row">
-                    <div class="skill-info">
-                      <span class="skill-name">Team Coordination</span>
-                      <span class="skill-percentage">87%</span>
-                    </div>
-                    <div class="progress">
-                      <div class="progress-bar" role="progressbar" aria-valuenow="87" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                  </div>
-                  <div class="skill-row">
-                    <div class="skill-info">
-                      <span class="skill-name">Strategic Planning</span>
-                      <span class="skill-percentage">83%</span>
-                    </div>
-                    <div class="progress">
-                      <div class="progress-bar" role="progressbar" aria-valuenow="83" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-          </div>
-
-          <div class="col-lg-4">
-            <div class="skills-sidebar">
-
-              <div class="expertise-highlight" data-aos="fade-up" data-aos-delay="350">
-                <div class="highlight-icon">
-                  <i class="bi bi-trophy"></i>
-                </div>
-                <h4 class="highlight-title">Years of Experience</h4>
-                <div class="experience-number">
-                  <span data-purecounter-start="0" data-purecounter-end="8" data-purecounter-duration="1" class="purecounter"></span>
-                  <span class="experience-label">Years</span>
-                </div>
-                <p class="highlight-description">Dedicated to mastering the craft of digital innovation and strategic problem-solving.</p>
-              </div>
-
-              <div class="technologies-section" data-aos="fade-up" data-aos-delay="400">
-                <h5 class="tech-title">Primary Technologies</h5>
-                <div class="tech-stack">
-                  <div class="tech-item">
-                    <i class="bi bi-filetype-js"></i>
-                    <span>JavaScript</span>
-                  </div>
-                  <div class="tech-item">
-                    <i class="bi bi-code-square"></i>
-                    <span>React</span>
-                  </div>
-                  <div class="tech-item">
-                    <i class="bi bi-server"></i>
-                    <span>Node.js</span>
-                  </div>
-                  <div class="tech-item">
-                    <i class="bi bi-cloud"></i>
-                    <span>AWS</span>
-                  </div>
-                  <div class="tech-item">
-                    <i class="bi bi-palette"></i>
-                    <span>Figma</span>
-                  </div>
-                  <div class="tech-item">
-                    <i class="bi bi-diagram-3"></i>
-                    <span>Docker</span>
-                  </div>
-                </div>
-              </div>
-
-              <div class="achievements-section" data-aos="fade-up" data-aos-delay="450">
-                <h5 class="achievements-title">Recent Achievements</h5>
-                <div class="achievement-list">
-                  <div class="achievement-item">
-                    <div class="achievement-date">2024</div>
-                    <div class="achievement-text">Certified Kubernetes Administrator</div>
-                  </div>
-                  <div class="achievement-item">
-                    <div class="achievement-date">2023</div>
-                    <div class="achievement-text">Google Cloud Professional Architect</div>
-                  </div>
-                  <div class="achievement-item">
-                    <div class="achievement-date">2023</div>
-                    <div class="achievement-text">AWS Solutions Architect Pro</div>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-    </section><!-- /Skills Section -->
 
     <!-- Resume Section -->
     <section id="resume" class="resume section">
-
-      <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Resume</h2>
-        <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
-      </div><!-- End Section Title -->
+        <p>Pengalaman pendidikan dan profesional saya dalam bidang matematika dan analisis data</p>
+      </div>
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
-
         <div class="row align-items-start">
-          <div class="col-lg-5" data-aos="fade-right" data-aos-delay="200">
+          <div class="col-lg-6" data-aos="fade-right" data-aos-delay="200">
             <div class="professional-journey">
               <div class="section-intro">
                 <div class="icon-wrapper">
                   <i class="bi bi-briefcase-fill"></i>
                 </div>
-                <h2>Professional Experience</h2>
-                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium totam rem aperiam.</p>
+                <h2>Pengalaman Kerja</h2>
+                <p>Pengalaman profesional saya di bidang media, verifikasi data, dan administrasi</p>
               </div>
 
               <div class="experience-timeline">
@@ -555,15 +749,15 @@
                   <div class="timeline-dot"></div>
                   <div class="timeline-content">
                     <div class="position-meta">
-                      <span class="timeline-year">2023 - Present</span>
+                      <span class="timeline-year">Maret 2024 - Oktober 2024</span>
                     </div>
-                    <h3>Creative Director</h3>
-                    <h4>Innovation Studios Ltd</h4>
-                    <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit sed quia consequuntur magni dolores eos qui ratione.</p>
+                    <h3>PHL Staf Verifikasi Data dan Administrasi</h3>
+                    <h4>Pos Indonesia Regional IV & Bulog</h4>
+                    <p>Memeriksa 1.000+ dokumen kelengkapan dalam proses distribusi dan penyaluran bantuan beras serta program stunting dari Bulog melalui Pos Indonesia, dengan tingkat akurasi ±99%. Mengevaluasi kesesuaian dokumen dengan standar verifikasi dan menentukan status approve atau reject.</p>
                     <div class="key-achievements">
-                      <span class="achievement-tag">Team Leadership</span>
-                      <span class="achievement-tag">Strategic Planning</span>
-                      <span class="achievement-tag">Creative Vision</span>
+                      <span class="achievement-tag">Verifikasi Data</span>
+                      <span class="achievement-tag">Administrasi</span>
+                      <span class="achievement-tag">Excel</span>
                     </div>
                   </div>
                 </div>
@@ -572,37 +766,30 @@
                   <div class="timeline-dot"></div>
                   <div class="timeline-content">
                     <div class="position-meta">
-                      <span class="timeline-year">2020 - 2023</span>
+                      <span class="timeline-year">Januari 2024 - Februari 2024</span>
                     </div>
-                    <h3>Senior Product Designer</h3>
-                    <h4>Digital Innovations Corp</h4>
-                    <p>Ut enim ad minima veniam quis nostrum exercitationem ullam corporis suscipit laboriosam nisi ut aliquid ex ea commodi.</p>
-                  </div>
-                </div>
-
-                <div class="timeline-item" data-aos="fade-up" data-aos-delay="400">
-                  <div class="timeline-dot"></div>
-                  <div class="timeline-content">
-                    <div class="position-meta">
-                      <span class="timeline-year">2017 - 2020</span>
+                    <h3>Intern Media</h3>
+                    <h4>Pos Indonesia Regional IV Semarang</h4>
+                    <p>Melakukan riset dan pendataan 50+ toko ekspor per hari, mencakup pelaku UMKM yang mengekspor produk ke luar negeri. Terlibat aktif dalam produksi 10+ konten video promosi layanan Pos Indonesia.</p>
+                    <div class="key-achievements">
+                      <span class="achievement-tag">Riset Data</span>
+                      <span class="achievement-tag">Konten Produksi</span>
+                      <span class="achievement-tag">Spreadsheet</span>
                     </div>
-                    <h3>UX/UI Designer</h3>
-                    <h4>Creative Solutions Agency</h4>
-                    <p>Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur vel illum.</p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-7" data-aos="fade-left" data-aos-delay="200">
+          <div class="col-lg-6" data-aos="fade-left" data-aos-delay="200">
             <div class="education-skills">
               <div class="section-intro">
                 <div class="icon-wrapper">
                   <i class="bi bi-mortarboard-fill"></i>
                 </div>
-                <h2>Education &amp; Qualifications</h2>
-                <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti.</p>
+                <h2>Pendidikan</h2>
+                <p>Latar belakang pendidikan formal dan prestasi akademik</p>
               </div>
 
               <div class="education-grid">
@@ -612,58 +799,15 @@
                       <i class="bi bi-award"></i>
                     </div>
                     <div class="degree-info">
-                      <h3>Master of Design</h3>
-                      <p class="institution">Tempus Design Institute</p>
-                      <span class="graduation-year">2015 - 2017</span>
+                      <h3>S1 Matematika</h3>
+                      <p class="institution">Universitas Islam Negeri Walisongo Semarang</p>
+                      <span class="graduation-year">Agustus 2021 - Juni 2025</span>
                     </div>
                   </div>
                   <div class="education-details">
-                    <p>Magna aliqua ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <p>Menyelesaikan program studi Matematika dengan fokus pada analisis data, statistik, dan komputasi matematika. Aktif dalam berbagai kegiatan akademik dan organisasi kampus.</p>
                     <div class="honors">
-                      <span class="honor-badge">Magna Cum Laude</span>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="education-card" data-aos="zoom-in" data-aos-delay="350">
-                  <div class="education-header">
-                    <div class="degree-icon">
-                      <i class="bi bi-laptop"></i>
-                    </div>
-                    <div class="degree-info">
-                      <h3>Bachelor of Arts</h3>
-                      <p class="institution">Creative Arts University</p>
-                      <span class="graduation-year">2011 - 2015</span>
-                    </div>
-                  </div>
-                  <div class="education-details">
-                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur excepteur sint.</p>
-                  </div>
-                </div>
-
-                <div class="certification-section" data-aos="fade-up" data-aos-delay="400">
-                  <h4>Professional Certifications</h4>
-                  <div class="certifications">
-                    <div class="cert-item">
-                      <i class="bi bi-patch-check"></i>
-                      <div class="cert-details">
-                        <span class="cert-name">Advanced UX Design</span>
-                        <span class="cert-provider">Design Academy • 2022</span>
-                      </div>
-                    </div>
-                    <div class="cert-item">
-                      <i class="bi bi-patch-check"></i>
-                      <div class="cert-details">
-                        <span class="cert-name">Digital Innovation Strategy</span>
-                        <span class="cert-provider">Innovation Institute • 2021</span>
-                      </div>
-                    </div>
-                    <div class="cert-item">
-                      <i class="bi bi-patch-check"></i>
-                      <div class="cert-details">
-                        <span class="cert-name">Leadership in Design</span>
-                        <span class="cert-provider">Leadership Academy • 2020</span>
-                      </div>
+                      <span class="honor-badge">IPK: 3.44 (149 SKS)</span>
                     </div>
                   </div>
                 </div>
@@ -671,428 +815,156 @@
             </div>
           </div>
         </div>
-
       </div>
-
     </section><!-- /Resume Section -->
 
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio section">
-
-      <!-- Section Title -->
+    <!-- Skills Section -->
+    <section id="skills" class="skills section">
       <div class="container section-title" data-aos="fade-up">
-        <h2>Portfolio</h2>
-        <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
-      </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
-
-          <div class="filters-wrapper" data-aos="fade-up" data-aos-delay="200">
-            <ul class="portfolio-filters isotope-filters">
-              <li data-filter="*" class="filter-active">All Work</li>
-              <li data-filter=".filter-branding">Branding</li>
-              <li data-filter=".filter-web">Web Design</li>
-              <li data-filter=".filter-photography">Photography</li>
-              <li data-filter=".filter-print">Print Design</li>
-            </ul>
-          </div>
-
-          <div class="row gy-5 portfolio-container isotope-container" data-aos="fade-up" data-aos-delay="300">
-
-            <div class="col-lg-6 portfolio-item isotope-item filter-branding">
-              <div class="portfolio-card">
-                <div class="portfolio-image">
-                  <img src="assets/img/portfolio/portfolio-3.webp" class="img-fluid" alt="Brand Identity Project" loading="lazy">
-                  <div class="portfolio-overlay">
-                    <div class="portfolio-actions">
-                      <a href="assets/img/portfolio/portfolio-3.webp" class="glightbox action-btn preview-btn" title="Elemental Branding"><i class="bi bi-eye"></i></a>
-                      <a href="portfolio-details.html" class="action-btn details-btn" title="View Project"><i class="bi bi-arrow-up-right"></i></a>
-                    </div>
-                  </div>
-                </div>
-                <div class="portfolio-content">
-                  <div class="portfolio-meta">
-                    <span class="portfolio-category">Brand Identity</span>
-                    <span class="portfolio-year">2024</span>
-                  </div>
-                  <h3 class="portfolio-title">Elemental Branding</h3>
-                  <p class="portfolio-description">Comprehensive brand identity design focusing on natural elements and sustainable business practices.</p>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-6 portfolio-item isotope-item filter-web">
-              <div class="portfolio-card">
-                <div class="portfolio-image">
-                  <img src="assets/img/portfolio/portfolio-7.webp" class="img-fluid" alt="Digital Platform" loading="lazy">
-                  <div class="portfolio-overlay">
-                    <div class="portfolio-actions">
-                      <a href="assets/img/portfolio/portfolio-7.webp" class="glightbox action-btn preview-btn" title="Digital Workspace"><i class="bi bi-eye"></i></a>
-                      <a href="portfolio-details.html" class="action-btn details-btn" title="View Project"><i class="bi bi-arrow-up-right"></i></a>
-                    </div>
-                  </div>
-                </div>
-                <div class="portfolio-content">
-                  <div class="portfolio-meta">
-                    <span class="portfolio-category">Web Application</span>
-                    <span class="portfolio-year">2024</span>
-                  </div>
-                  <h3 class="portfolio-title">Digital Workspace</h3>
-                  <p class="portfolio-description">Modern web application designed for remote collaboration with intuitive user experience and clean aesthetics.</p>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-6 portfolio-item isotope-item filter-photography">
-              <div class="portfolio-card">
-                <div class="portfolio-image">
-                  <img src="assets/img/portfolio/portfolio-portrait-3.webp" class="img-fluid" alt="Urban Photography" loading="lazy">
-                  <div class="portfolio-overlay">
-                    <div class="portfolio-actions">
-                      <a href="assets/img/portfolio/portfolio-portrait-3.webp" class="glightbox action-btn preview-btn" title="Urban Narratives"><i class="bi bi-eye"></i></a>
-                      <a href="portfolio-details.html" class="action-btn details-btn" title="View Project"><i class="bi bi-arrow-up-right"></i></a>
-                    </div>
-                  </div>
-                </div>
-                <div class="portfolio-content">
-                  <div class="portfolio-meta">
-                    <span class="portfolio-category">Photography</span>
-                    <span class="portfolio-year">2023</span>
-                  </div>
-                  <h3 class="portfolio-title">Urban Narratives</h3>
-                  <p class="portfolio-description">Street photography series capturing the essence of metropolitan life and human connections.</p>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-6 portfolio-item isotope-item filter-print">
-              <div class="portfolio-card">
-                <div class="portfolio-image">
-                  <img src="assets/img/portfolio/portfolio-9.webp" class="img-fluid" alt="Editorial Design" loading="lazy">
-                  <div class="portfolio-overlay">
-                    <div class="portfolio-actions">
-                      <a href="assets/img/portfolio/portfolio-9.webp" class="glightbox action-btn preview-btn" title="Annual Report Design"><i class="bi bi-eye"></i></a>
-                      <a href="portfolio-details.html" class="action-btn details-btn" title="View Project"><i class="bi bi-arrow-up-right"></i></a>
-                    </div>
-                  </div>
-                </div>
-                <div class="portfolio-content">
-                  <div class="portfolio-meta">
-                    <span class="portfolio-category">Editorial Design</span>
-                    <span class="portfolio-year">2024</span>
-                  </div>
-                  <h3 class="portfolio-title">Annual Report Design</h3>
-                  <p class="portfolio-description">Sophisticated annual report combining data visualization with compelling storytelling and premium print finishes.</p>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-6 portfolio-item isotope-item filter-branding">
-              <div class="portfolio-card">
-                <div class="portfolio-image">
-                  <img src="assets/img/portfolio/portfolio-11.webp" class="img-fluid" alt="Package Design" loading="lazy">
-                  <div class="portfolio-overlay">
-                    <div class="portfolio-actions">
-                      <a href="assets/img/portfolio/portfolio-11.webp" class="glightbox action-btn preview-btn" title="Artisan Collection"><i class="bi bi-eye"></i></a>
-                      <a href="portfolio-details.html" class="action-btn details-btn" title="View Project"><i class="bi bi-arrow-up-right"></i></a>
-                    </div>
-                  </div>
-                </div>
-                <div class="portfolio-content">
-                  <div class="portfolio-meta">
-                    <span class="portfolio-category">Package Design</span>
-                    <span class="portfolio-year">2023</span>
-                  </div>
-                  <h3 class="portfolio-title">Artisan Collection</h3>
-                  <p class="portfolio-description">Luxury packaging design series celebrating traditional craftsmanship with contemporary minimalist approach.</p>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-6 portfolio-item isotope-item filter-web">
-              <div class="portfolio-card">
-                <div class="portfolio-image">
-                  <img src="assets/img/portfolio/portfolio-12.webp" class="img-fluid" alt="E-commerce Platform" loading="lazy">
-                  <div class="portfolio-overlay">
-                    <div class="portfolio-actions">
-                      <a href="assets/img/portfolio/portfolio-12.webp" class="glightbox action-btn preview-btn" title="Sustainable Commerce"><i class="bi bi-eye"></i></a>
-                      <a href="portfolio-details.html" class="action-btn details-btn" title="View Project"><i class="bi bi-arrow-up-right"></i></a>
-                    </div>
-                  </div>
-                </div>
-                <div class="portfolio-content">
-                  <div class="portfolio-meta">
-                    <span class="portfolio-category">E-commerce</span>
-                    <span class="portfolio-year">2024</span>
-                  </div>
-                  <h3 class="portfolio-title">Sustainable Commerce</h3>
-                  <p class="portfolio-description">Eco-conscious e-commerce platform design promoting sustainable products with seamless shopping experience.</p>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-          </div><!-- End Portfolio Container -->
-
-        </div>
-
+        <h2>Skills</h2>
+        <p>Kemampuan teknis dan soft skills yang saya kuasai dalam bidang analisis data dan profesional</p>
       </div>
 
-    </section><!-- /Portfolio Section -->
-
-    <!-- Services Section -->
-    <section id="services" class="services section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Services</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-      </div><!-- End Section Title -->
-
       <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row g-5">
-
-          <div class="col-lg-6" data-aos="fade-right" data-aos-delay="200">
-            <div class="service-item">
-              <div class="service-icon">
-                <i class="bi bi-palette"></i>
-              </div>
-              <div class="service-content">
-                <h3><a href="service-details.html">Brand Identity Design</a></h3>
-                <p>Crafting distinctive visual identities that capture your brand's essence and connect with your target audience through thoughtful design systems.</p>
-                <a href="service-details.html" class="read-more">
-                  <span>Learn More</span>
-                  <i class="bi bi-arrow-right"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-6" data-aos="fade-left" data-aos-delay="250">
-            <div class="service-item">
-              <div class="service-icon">
-                <i class="bi bi-code-slash"></i>
-              </div>
-              <div class="service-content">
-                <h3><a href="service-details.html">Web Development</a></h3>
-                <p>Building modern, responsive websites and applications with clean code, optimal performance, and seamless user experiences across all devices.</p>
-                <a href="service-details.html" class="read-more">
-                  <span>Learn More</span>
-                  <i class="bi bi-arrow-right"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-6" data-aos="fade-right" data-aos-delay="300">
-            <div class="service-item">
-              <div class="service-icon">
-                <i class="bi bi-phone"></i>
-              </div>
-              <div class="service-content">
-                <h3><a href="service-details.html">UI/UX Design</a></h3>
-                <p>Designing intuitive interfaces and user experiences that balance aesthetics with functionality, ensuring every interaction feels natural and purposeful.</p>
-                <a href="service-details.html" class="read-more">
-                  <span>Learn More</span>
-                  <i class="bi bi-arrow-right"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-6" data-aos="fade-left" data-aos-delay="350">
-            <div class="service-item">
-              <div class="service-icon">
-                <i class="bi bi-megaphone"></i>
-              </div>
-              <div class="service-content">
-                <h3><a href="service-details.html">Digital Strategy</a></h3>
-                <p>Developing comprehensive digital strategies that align with your business goals and maximize your online presence through data-driven insights.</p>
-                <a href="service-details.html" class="read-more">
-                  <span>Learn More</span>
-                  <i class="bi bi-arrow-right"></i>
-                </a>
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="skills-container">
+              <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
+                <div class="category-header">
+                  <h3 class="category-title">Hard Skills</h3>
+                  <p class="category-subtitle">Kemampuan teknis dalam pengolahan dan analisis data</p>
+                </div>
+                <div class="skills-list">
+                  <div class="skill-row">
+                    <div class="skill-info">
+                      <span class="skill-name">Microsoft Excel & Spreadsheet</span>
+                      <span class="skill-percentage">95%</span>
+                    </div>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                  </div>
+                  <div class="skill-row">
+                    <div class="skill-info">
+                      <span class="skill-name">Data Verification & Analysis</span>
+                      <span class="skill-percentage">90%</span>
+                    </div>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                  </div>
+                  <div class="skill-row">
+                    <div class="skill-info">
+                      <span class="skill-name">Python, R Studio, MATLAB</span>
+                      <span class="skill-percentage">85%</span>
+                    </div>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                  </div>
+                  <div class="skill-row">
+                    <div class="skill-info">
+                      <span class="skill-name">SPSS, Minitab, Tableau</span>
+                      <span class="skill-percentage">80%</span>
+                    </div>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                  </div>
+                  <div class="skill-row">
+                    <div class="skill-info">
+                      <span class="skill-name">Microsoft Office & LaTeX</span>
+                      <span class="skill-percentage">88%</span>
+                    </div>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" style="width: 88%" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
 
+          <div class="col-lg-6">
+            <div class="skills-container">
+              <div class="skill-category" data-aos="fade-up" data-aos-delay="250">
+                <div class="category-header">
+                  <h3 class="category-title">Soft Skills</h3>
+                  <p class="category-subtitle">Kemampuan interpersonal dan profesional</p>
+                </div>
+                <div class="skills-list">
+                  <div class="skill-row">
+                    <div class="skill-info">
+                      <span class="skill-name">Kepemimpinan & Koordinasi Tim</span>
+                      <span class="skill-percentage">90%</span>
+                    </div>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                  </div>
+                  <div class="skill-row">
+                    <div class="skill-info">
+                      <span class="skill-name">Teliti & Bertanggung Jawab</span>
+                      <span class="skill-percentage">95%</span>
+                    </div>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                  </div>
+                  <div class="skill-row">
+                    <div class="skill-info">
+                      <span class="skill-name">Komunikasi Efektif</span>
+                      <span class="skill-percentage">88%</span>
+                    </div>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" style="width: 88%" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                  </div>
+                  <div class="skill-row">
+                    <div class="skill-info">
+                      <span class="skill-name">Kreatif & Adaptif</span>
+                      <span class="skill-percentage">85%</span>
+                    </div>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-
       </div>
-
-    </section><!-- /Services Section -->
-
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="testimonials section light-background">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Testimonials</h2>
-        <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
-      </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="testimonials-slider swiper init-swiper">
-          <script type="application/json" class="swiper-config">
-            {
-              "loop": true,
-              "speed": 600,
-              "autoplay": {
-                "delay": 5000
-              },
-              "slidesPerView": 1,
-              "spaceBetween": 30,
-              "pagination": {
-                "el": ".swiper-pagination",
-                "type": "bullets",
-                "clickable": true
-              },
-              "navigation": {
-                "nextEl": ".swiper-button-next",
-                "prevEl": ".swiper-button-prev"
-              }
-            }
-          </script>
-          <div class="swiper-wrapper">
-
-            <div class="swiper-slide">
-              <div class="testimonial-slide" data-aos="fade-up" data-aos-delay="200">
-                <div class="testimonial-header">
-                  <div class="stars-rating">
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                  </div>
-                  <div class="quote-icon">
-                    <i class="bi bi-quote"></i>
-                  </div>
-                </div>
-                <div class="testimonial-body">
-                  <p>"Outstanding service quality and innovative solutions have completely transformed our business processes, resulting in enhanced productivity and exceptional customer satisfaction throughout our organization."</p>
-                </div>
-                <div class="testimonial-footer">
-                  <div class="author-info">
-                    <img src="assets/img/person/person-f-12.webp" alt="Author" class="author-avatar">
-                    <div class="author-details">
-                      <h4>Sophia Martinez</h4>
-                      <span class="role">Operations Director</span>
-                      <span class="company">TechVision Corp</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="swiper-slide">
-              <div class="testimonial-slide" data-aos="fade-up" data-aos-delay="300">
-                <div class="testimonial-header">
-                  <div class="stars-rating">
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                  </div>
-                  <div class="quote-icon">
-                    <i class="bi bi-quote"></i>
-                  </div>
-                </div>
-                <div class="testimonial-body">
-                  <p>"Professional expertise and dedicated support have significantly improved our project delivery timelines while maintaining exceptional quality standards across all our initiatives."</p>
-                </div>
-                <div class="testimonial-footer">
-                  <div class="author-info">
-                    <img src="assets/img/person/person-m-14.webp" alt="Author" class="author-avatar">
-                    <div class="author-details">
-                      <h4>Michael Anderson</h4>
-                      <span class="role">Project Manager</span>
-                      <span class="company">InnovateTech Ltd</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="swiper-slide">
-              <div class="testimonial-slide" data-aos="fade-up" data-aos-delay="400">
-                <div class="testimonial-header">
-                  <div class="stars-rating">
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                  </div>
-                  <div class="quote-icon">
-                    <i class="bi bi-quote"></i>
-                  </div>
-                </div>
-                <div class="testimonial-body">
-                  <p>"Strategic collaboration and innovative thinking have enabled remarkable digital transformation, leading to increased efficiency and measurable business growth results."</p>
-                </div>
-                <div class="testimonial-footer">
-                  <div class="author-info">
-                    <img src="assets/img/person/person-f-11.webp" alt="Author" class="author-avatar">
-                    <div class="author-details">
-                      <h4>Jennifer Wilson</h4>
-                      <span class="role">Digital Strategy Lead</span>
-                      <span class="company">FutureScope Inc</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-          </div>
-
-          <div class="swiper-navigation-wrapper">
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-pagination"></div>
-            <div class="swiper-button-next"></div>
-          </div>
-
-        </div>
-
-      </div>
-
-    </section><!-- /Testimonials Section -->
+    </section><!-- /Skills Section -->
 
     <!-- Contact Section -->
     <section id="contact" class="contact section">
-      <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Contact</h2>
-        <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
-      </div><!-- End Section Title -->
+        <h2>Hubungi Saya</h2>
+        <p>Mari berdiskusi tentang peluang kerja sama atau proyek yang bisa kita kerjakan bersama</p>
+      </div>
 
       <div class="container">
         <div class="row gy-4">
           <div class="col-lg-5">
-
             <div class="info-item">
               <div class="info-icon">
                 <i class="bi bi-chat-dots"></i>
               </div>
               <div class="info-content">
-                <h4>Let's Connect</h4>
-                <p>We're here to discuss your vision and explore how we can bring it to life together.</p>
+                <h4>Mari Terhubung</h4>
+                <p>Saya terbuka untuk diskusi mengenai peluang kerja, kolaborasi, atau sekadar berbagi pengalaman di bidang data analysis.</p>
               </div>
             </div>
 
             <div class="contact-details">
-
               <div class="detail-item">
                 <div class="detail-icon">
                   <i class="bi bi-envelope-open"></i>
                 </div>
                 <div class="detail-content">
-                  <span class="detail-label">Email us</span>
-                  <span class="detail-value">contact@example.com</span>
+                  <span class="detail-label">Email</span>
+                  <span class="detail-value">fadil.2002.fam@gmail.com</span>
                 </div>
               </div>
 
@@ -1101,8 +973,8 @@
                   <i class="bi bi-telephone-outbound"></i>
                 </div>
                 <div class="detail-content">
-                  <span class="detail-label">Call us</span>
-                  <span class="detail-value">+1 (555) 432-8976</span>
+                  <span class="detail-label">Telepon</span>
+                  <span class="detail-value">+62 895-3324-74940</span>
                 </div>
               </div>
 
@@ -1111,93 +983,79 @@
                   <i class="bi bi-geo-alt-fill"></i>
                 </div>
                 <div class="detail-content">
-                  <span class="detail-label">Visit us</span>
-                  <span class="detail-value">547 Madison Avenue<br>New York, NY 10022</span>
+                  <span class="detail-label">Lokasi</span>
+                  <span class="detail-value">Bekasi, Indonesia</span>
                 </div>
               </div>
 
+              <div class="detail-item">
+                <div class="detail-icon">
+                  <i class="bi bi-linkedin"></i>
+                </div>
+                <div class="detail-content">
+                  <span class="detail-label">LinkedIn</span>
+                  <span class="detail-value">linkedin.com/in/fadillah-al-musyaffa</span>
+                </div>
+              </div>
             </div>
-
           </div>
 
           <div class="col-lg-7">
             <div class="form-wrapper">
               <div class="form-header">
-                <h3>Send us a message</h3>
+                <h3>Kirim Pesan</h3>
               </div>
 
-              <form action="forms/contact.php" method="post" class="php-email-form">
-
+              <form method="post" class="contact-form">
                 <div class="row">
                   <div class="col-md-6">
                     <div class="form-group">
-                      <label>Full Name</label>
-                      <input type="text" name="name" required="">
+                      <label>Nama Lengkap</label>
+                      <input type="text" name="name" required>
                     </div>
                   </div>
                   <div class="col-md-6">
                     <div class="form-group">
-                      <label>Email Address</label>
-                      <input type="email" name="email" required="">
+                      <label>Email</label>
+                      <input type="email" name="email" required>
                     </div>
                   </div>
                 </div>
 
                 <div class="form-group">
-                  <label>Subject</label>
-                  <input type="text" name="subject" required="">
+                  <label>Subjek</label>
+                  <input type="text" name="subject" required>
                 </div>
 
                 <div class="form-group">
-                  <label for="projectMessage">Message</label>
-                  <textarea name="message" id="projectMessage" rows="5" required=""></textarea>
-                </div>
-
-                <div class="my-3">
-                  <div class="loading">Loading</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">Your message has been sent. Thank you!</div>
+                  <label>Pesan</label>
+                  <textarea name="message" rows="5" required></textarea>
                 </div>
 
                 <button type="submit" class="submit-btn">
-                  <span>Send Message</span>
+                  <span>Kirim Pesan</span>
                   <i class="bi bi-arrow-right"></i>
                 </button>
-
               </form>
-
             </div>
-
           </div>
-
         </div>
       </div>
-
     </section><!-- /Contact Section -->
 
   </main>
 
-  <footer id="footer" class="footer light-background">
+  <footer id="footer" class="footer">
     <div class="container">
       <h3 class="sitename">Fadillah Al Musyaffa</h3>
-      <p>Et aut eum quis fuga eos sunt ipsa nihil. Labore corporis magni eligendi fuga maxime saepe commodi placeat.</p>
+      <p>Fresh Graduate Matematika | Data Enthusiast | Ready for New Opportunities</p>
       <div class="social-links d-flex justify-content-center">
-        <a href=""><i class="bi bi-twitter-x"></i></a>
-        <a href=""><i class="bi bi-facebook"></i></a>
-        <a href=""><i class="bi bi-instagram"></i></a>
-        <a href=""><i class="bi bi-skype"></i></a>
-        <a href=""><i class="bi bi-linkedin"></i></a>
+        <a href="https://linkedin.com/in/fadillah-al-musyaffa" target="_blank"><i class="bi bi-linkedin"></i></a>
+        <a href="https://instagram.com/fdlh.almsyffa" target="_blank"><i class="bi bi-instagram"></i></a>
       </div>
       <div class="container">
         <div class="copyright">
-          <span>Copyright</span> <strong class="px-1 sitename">Fadillah Al Musyaffa</strong> <span>All Rights Reserved</span>
-        </div>
-        <div class="credits">
-          <!-- All the links in the footer should remain intact. -->
-          <!-- You can delete the links only if you've purchased the pro version. -->
-          <!-- Licensing information: https://bootstrapmade.com/license/ -->
-          <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+          <span>Copyright</span> <strong class="px-1 sitename">Fadillah Al Musyaffa</strong> <span>All Rights Reserved © 2025</span>
         </div>
       </div>
     </div>
@@ -1206,24 +1064,91 @@
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
-  <!-- Preloader -->
-  <div id="preloader"></div>
-
   <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/typed.js/typed.umd.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/glightbox/3.2.0/js/glightbox.min.js"></script>
 
-  <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
+  <script>
+    // Initialize AOS
+    AOS.init({
+      duration: 1000,
+      easing: 'ease-in-out',
+      once: true,
+      mirror: false
+    });
+
+    // Smooth scrolling
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+
+    // Active nav on scroll
+    window.addEventListener('scroll', () => {
+      const sections = document.querySelectorAll('section[id]');
+      const scrollY = window.pageYOffset;
+
+      sections.forEach(section => {
+        const sectionHeight = section.offsetHeight;
+        const sectionTop = section.offsetTop - 100;
+        const sectionId = section.getAttribute('id');
+        const navLink = document.querySelector(`.navmenu a[href="#${sectionId}"]`);
+
+        if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+          document.querySelectorAll('.navmenu a').forEach(link => link.classList.remove('active'));
+          if (navLink) navLink.classList.add('active');
+        }
+      });
+
+      // Scroll top button
+      const scrollTop = document.querySelector('.scroll-top');
+      if (scrollY > 100) {
+        scrollTop.classList.add('active');
+      } else {
+        scrollTop.classList.remove('active');
+      }
+    });
+
+    // Progress bar animation
+    const animateProgressBars = () => {
+      const progressBars = document.querySelectorAll('.progress-bar');
+      progressBars.forEach(bar => {
+        const width = bar.getAttribute('aria-valuenow');
+        bar.style.width = width + '%';
+      });
+    };
+
+    // Trigger progress animation when skills section is visible
+    const skillsSection = document.querySelector('#skills');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          animateProgressBars();
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.3 });
+
+    if (skillsSection) {
+      observer.observe(skillsSection);
+    }
+
+    // Form submission
+    document.querySelector('.contact-form')?.addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('Terima kasih! Pesan Anda telah dikirim. Saya akan segera menghubungi Anda.');
+      this.reset();
+    });
+  </script>
 
 </body>
-
 </html>
