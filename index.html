@@ -5,14 +5,13 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <title>Fadillah Al Musyaffa - Portfolio</title>
   <meta name="description" content="Portfolio Fadillah Al Musyaffa - Fresh Graduate Matematika UIN Walisongo Semarang">
-  <meta name="keywords" content="Fadillah Al Musyaffa, Matematika, Data Analysis, Portfolio">
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
 
-  <!-- Vendor CSS Files -->
+  <!-- Vendor CSS -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.1/font/bootstrap-icons.min.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
@@ -20,12 +19,15 @@
 
   <style>
     :root {
-      --background-color: #ffffff;
-      --default-color: #272829;
-      --heading-color: #45505b;
-      --accent-color: #0563bb;
-      --surface-color: #ffffff;
-      --contrast-color: #ffffff;
+      --primary-color: #0891b2;
+      --secondary-color: #10b981;
+      --accent-color: #06b6d4;
+      --dark-bg: #0f172a;
+      --light-bg: #f0fdfa;
+      --text-dark: #1e293b;
+      --text-light: #64748b;
+      --gradient-1: linear-gradient(135deg, #0891b2 0%, #10b981 100%);
+      --gradient-2: linear-gradient(135deg, #06b6d4 0%, #3b82f6 100%);
     }
 
     * {
@@ -35,23 +37,23 @@
     }
 
     body {
-      color: var(--default-color);
-      background-color: var(--background-color);
+      color: var(--text-dark);
+      background: linear-gradient(to bottom, #f0fdfa, #ecfeff);
       font-family: 'Roboto', sans-serif;
     }
 
     a {
-      color: var(--accent-color);
+      color: var(--primary-color);
       text-decoration: none;
       transition: 0.3s;
     }
 
     a:hover {
-      color: #0678e3;
+      color: var(--secondary-color);
     }
 
     h1, h2, h3, h4, h5, h6 {
-      color: var(--heading-color);
+      color: var(--text-dark);
       font-family: 'Raleway', sans-serif;
     }
 
@@ -65,26 +67,23 @@
       transition: all ease-in-out 0.5s;
       z-index: 997;
       padding: 0 15px;
-      background-color: #040b14;
+      background: var(--gradient-1);
       overflow-y: auto;
+      box-shadow: 4px 0 20px rgba(8, 145, 178, 0.2);
     }
 
     .header .profile-img img {
       margin: 15px auto;
       display: block;
       width: 120px;
-      border: 8px solid #2c2f3f;
+      border: 5px solid rgba(255, 255, 255, 0.3);
       border-radius: 50%;
-    }
-
-    .header .logo {
-      line-height: 1;
-      margin: 0 0 15px 0;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     }
 
     .header .logo h1 {
       font-size: 24px;
-      margin: 0;
+      margin: 0 0 15px 0;
       padding: 0;
       font-weight: 700;
       color: #fff;
@@ -99,7 +98,7 @@
     .header .social-links a {
       font-size: 16px;
       display: inline-block;
-      background: #212431;
+      background: rgba(255, 255, 255, 0.2);
       color: #fff;
       line-height: 1;
       padding: 8px 0;
@@ -112,15 +111,11 @@
     }
 
     .header .social-links a:hover {
-      background: var(--accent-color);
-      color: #fff;
+      background: rgba(255, 255, 255, 0.4);
+      transform: translateY(-3px);
     }
 
     /* Navigation */
-    .navmenu {
-      padding: 0;
-    }
-
     .navmenu ul {
       list-style: none;
       padding: 0 0 20px 0;
@@ -129,8 +124,8 @@
     .navmenu a {
       display: flex;
       align-items: center;
-      color: #a8a9b4;
-      padding: 10px 18px;
+      color: rgba(255, 255, 255, 0.9);
+      padding: 12px 18px;
       margin-bottom: 8px;
       transition: 0.3s;
       font-size: 15px;
@@ -140,18 +135,13 @@
     .navmenu a i {
       font-size: 20px;
       padding-right: 8px;
-      color: #6f7180;
     }
 
     .navmenu a:hover,
     .navmenu .active {
       color: #fff;
-      background: var(--accent-color);
-    }
-
-    .navmenu a:hover i,
-    .navmenu .active i {
-      color: #fff;
+      background: rgba(255, 255, 255, 0.2);
+      transform: translateX(5px);
     }
 
     /* Main */
@@ -176,7 +166,7 @@
       padding: 80px 0;
       display: flex;
       align-items: center;
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      background: var(--gradient-2);
     }
 
     .hero .hero-content {
@@ -191,36 +181,37 @@
     }
 
     .hero .accent-text {
-      color: #ffd700;
+      color: #fef08a;
     }
 
     .hero p {
-      color: rgba(255, 255, 255, 0.9);
+      color: rgba(255, 255, 255, 0.95);
       margin-bottom: 30px;
       font-size: 18px;
-      line-height: 1.6;
+      line-height: 1.7;
     }
 
     .hero .btn-primary {
-      padding: 12px 30px;
+      padding: 14px 35px;
       border-radius: 50px;
       background: #fff;
-      color: #667eea;
+      color: var(--primary-color);
       font-weight: 600;
       transition: 0.3s;
       border: none;
       margin-right: 15px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
     }
 
     .hero .btn-primary:hover {
-      background: #ffd700;
-      color: #667eea;
-      transform: translateY(-2px);
-      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+      background: #fef08a;
+      color: var(--dark-bg);
+      transform: translateY(-3px);
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
     }
 
     .hero .btn-secondary {
-      padding: 12px 30px;
+      padding: 14px 35px;
       border-radius: 50px;
       background: transparent;
       color: #fff;
@@ -231,36 +222,42 @@
 
     .hero .btn-secondary:hover {
       background: #fff;
-      color: #667eea;
+      color: var(--primary-color);
+      transform: translateY(-3px);
     }
 
     .hero-image img {
       width: 100%;
       height: auto;
       border-radius: 20px;
-      box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+      box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+      border: 5px solid rgba(255, 255, 255, 0.2);
     }
 
     /* About Section */
     .about {
       padding: 80px 0;
+      background: linear-gradient(to bottom, #ecfeff, #f0fdfa);
     }
 
     .about .intro-header h1 {
       font-size: 42px;
       margin-bottom: 15px;
+      color: var(--text-dark);
     }
 
     .about .subtitle {
-      font-size: 20px;
-      color: var(--accent-color);
+      font-size: 22px;
+      color: var(--primary-color);
       margin-bottom: 40px;
+      font-weight: 500;
     }
 
     .about .profile-image-container img {
       width: 100%;
       border-radius: 15px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      box-shadow: 0 15px 35px rgba(8, 145, 178, 0.2);
+      border: 5px solid rgba(8, 145, 178, 0.1);
     }
 
     .about .location {
@@ -268,20 +265,27 @@
       align-items: center;
       gap: 8px;
       margin: 15px 0;
-      color: #666;
+      color: var(--text-light);
+      font-size: 16px;
+    }
+
+    .about .location i {
+      color: var(--primary-color);
+      font-size: 20px;
     }
 
     .about .status {
       display: flex;
       align-items: center;
       gap: 8px;
-      color: #28a745;
+      color: var(--secondary-color);
+      font-weight: 500;
     }
 
     .about .status-indicator {
       width: 10px;
       height: 10px;
-      background: #28a745;
+      background: var(--secondary-color);
       border-radius: 50%;
       animation: pulse 2s infinite;
     }
@@ -292,41 +296,63 @@
     }
 
     .about .lead-text {
-      font-size: 20px;
+      font-size: 19px;
       line-height: 1.8;
       margin-bottom: 20px;
-      color: #555;
+      color: var(--text-dark);
     }
 
-    /* Skills Section */
-    .skills {
-      padding: 80px 0;
-      background: #f8f9fa;
+    .about p {
+      line-height: 1.8;
+      color: var(--text-light);
+      margin-bottom: 15px;
     }
 
+    /* Section Title */
     .section-title {
       text-align: center;
       padding-bottom: 60px;
     }
 
     .section-title h2 {
-      font-size: 32px;
+      font-size: 36px;
       font-weight: 700;
       margin-bottom: 20px;
       position: relative;
       display: inline-block;
+      color: var(--text-dark);
     }
 
     .section-title h2::after {
       content: '';
       position: absolute;
       display: block;
-      width: 50px;
-      height: 3px;
-      background: var(--accent-color);
+      width: 60px;
+      height: 4px;
+      background: var(--gradient-1);
       bottom: -10px;
       left: 50%;
       transform: translateX(-50%);
+      border-radius: 2px;
+    }
+
+    .section-title p {
+      color: var(--text-light);
+      font-size: 16px;
+    }
+
+    /* Skills Section */
+    .skills {
+      padding: 80px 0;
+      background: #fff;
+    }
+
+    .skills-container {
+      background: linear-gradient(135deg, #f0fdfa 0%, #ecfeff 100%);
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(8, 145, 178, 0.1);
+      border: 2px solid rgba(8, 145, 178, 0.1);
     }
 
     .skill-category {
@@ -334,53 +360,64 @@
     }
 
     .category-header h3 {
-      font-size: 24px;
+      font-size: 26px;
       margin-bottom: 10px;
+      color: var(--primary-color);
     }
 
     .category-subtitle {
-      color: #666;
+      color: var(--text-light);
       margin-bottom: 25px;
+      font-size: 15px;
     }
 
-    .skill-row {
-      margin-bottom: 20px;
+    .skills-list {
+      list-style: none;
+      padding: 0;
     }
 
-    .skill-info {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 8px;
+    .skill-item {
+      padding: 15px 20px;
+      margin-bottom: 12px;
+      background: #fff;
+      border-radius: 12px;
+      border-left: 4px solid var(--primary-color);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      transition: 0.3s;
     }
 
-    .skill-name {
-      font-weight: 500;
+    .skill-item:hover {
+      transform: translateX(5px);
+      box-shadow: 0 6px 20px rgba(8, 145, 178, 0.15);
     }
 
-    .skill-percentage {
-      color: var(--accent-color);
-      font-weight: 600;
+    .skill-item i {
+      color: var(--primary-color);
+      margin-right: 10px;
+      font-size: 18px;
     }
 
-    .progress {
-      height: 10px;
-      border-radius: 10px;
-      background: #e9ecef;
+    .skill-item strong {
+      color: var(--text-dark);
+      display: block;
+      margin-bottom: 5px;
+      font-size: 16px;
     }
 
-    .progress-bar {
-      background: linear-gradient(90deg, var(--accent-color), #0678e3);
-      border-radius: 10px;
-      transition: width 1.5s ease;
+    .skill-item span {
+      color: var(--text-light);
+      font-size: 14px;
+      line-height: 1.6;
     }
 
     /* Resume Section */
     .resume {
       padding: 80px 0;
+      background: linear-gradient(to bottom, #f0fdfa, #ecfeff);
     }
 
     .timeline-item {
-      padding-left: 30px;
+      padding-left: 35px;
       position: relative;
       margin-bottom: 40px;
     }
@@ -389,22 +426,22 @@
       position: absolute;
       left: 0;
       top: 0;
-      width: 16px;
-      height: 16px;
+      width: 18px;
+      height: 18px;
       border-radius: 50%;
-      background: var(--accent-color);
-      border: 3px solid #fff;
-      box-shadow: 0 0 0 3px var(--accent-color);
+      background: var(--primary-color);
+      border: 4px solid #fff;
+      box-shadow: 0 0 0 3px rgba(8, 145, 178, 0.3);
     }
 
     .timeline-item::before {
       content: '';
       position: absolute;
-      left: 7px;
-      top: 20px;
+      left: 8px;
+      top: 22px;
       bottom: -30px;
       width: 2px;
-      background: #e9ecef;
+      background: linear-gradient(to bottom, var(--primary-color), var(--secondary-color));
     }
 
     .timeline-item:last-child::before {
@@ -413,54 +450,259 @@
 
     .timeline-year {
       display: inline-block;
-      padding: 4px 12px;
-      background: var(--accent-color);
+      padding: 6px 16px;
+      background: var(--gradient-1);
       color: #fff;
       border-radius: 20px;
       font-size: 13px;
       font-weight: 600;
-      margin-bottom: 10px;
+      margin-bottom: 12px;
+      box-shadow: 0 4px 10px rgba(8, 145, 178, 0.3);
     }
 
     .timeline-content h3 {
       font-size: 22px;
-      margin-bottom: 5px;
+      margin-bottom: 8px;
+      color: var(--text-dark);
     }
 
     .timeline-content h4 {
       font-size: 16px;
-      color: #666;
+      color: var(--primary-color);
       margin-bottom: 15px;
+      font-weight: 600;
+    }
+
+    .timeline-content p {
+      line-height: 1.8;
+      color: var(--text-light);
     }
 
     .achievement-tag {
       display: inline-block;
-      padding: 5px 15px;
-      background: #f0f0f0;
+      padding: 6px 16px;
+      background: linear-gradient(135deg, #ecfeff, #f0fdfa);
+      border: 1px solid var(--primary-color);
       border-radius: 20px;
       font-size: 13px;
       margin: 5px 5px 0 0;
-      color: #666;
+      color: var(--primary-color);
+      font-weight: 500;
+    }
+
+    .education-card {
+      background: #fff;
+      padding: 35px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(8, 145, 178, 0.15);
+      border: 2px solid rgba(8, 145, 178, 0.1);
+      margin-bottom: 25px;
+    }
+
+    .education-card.primary {
+      background: linear-gradient(135deg, #f0fdfa 0%, #ecfeff 100%);
+      border: 2px solid var(--primary-color);
+    }
+
+    .degree-icon {
+      font-size: 40px;
+      color: var(--primary-color);
+      margin-bottom: 15px;
+    }
+
+    .degree-info h3 {
+      font-size: 24px;
+      margin-bottom: 8px;
+      color: var(--text-dark);
+    }
+
+    .institution {
+      color: var(--primary-color);
+      font-weight: 600;
+      font-size: 16px;
+      margin-bottom: 8px;
+    }
+
+    .graduation-year {
+      color: var(--text-light);
+      font-size: 14px;
+    }
+
+    .honor-badge {
+      display: inline-block;
+      padding: 8px 20px;
+      background: var(--gradient-1);
+      color: #fff;
+      border-radius: 25px;
+      font-weight: 600;
+      margin-top: 15px;
+      box-shadow: 0 4px 15px rgba(8, 145, 178, 0.3);
+    }
+
+    /* Portfolio Section */
+    .portfolio {
+      padding: 80px 0;
+      background: #fff;
+    }
+
+    .portfolio-filters {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 40px 0;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .portfolio-filters li {
+      cursor: pointer;
+      padding: 10px 25px;
+      border-radius: 50px;
+      background: linear-gradient(135deg, #f0fdfa, #ecfeff);
+      color: var(--primary-color);
+      font-weight: 500;
+      transition: 0.3s;
+      border: 2px solid var(--primary-color);
+    }
+
+    .portfolio-filters li:hover,
+    .portfolio-filters .filter-active {
+      background: var(--gradient-1);
+      color: #fff;
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(8, 145, 178, 0.3);
+    }
+
+    .portfolio-card {
+      background: #fff;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      transition: 0.3s;
+      margin-bottom: 30px;
+      border: 2px solid rgba(8, 145, 178, 0.1);
+    }
+
+    .portfolio-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(8, 145, 178, 0.2);
+    }
+
+    .portfolio-image {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .portfolio-image img {
+      width: 100%;
+      height: auto;
+      transition: 0.3s;
+    }
+
+    .portfolio-card:hover .portfolio-image img {
+      transform: scale(1.1);
+    }
+
+    .portfolio-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(8, 145, 178, 0.9);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: 0.3s;
+    }
+
+    .portfolio-card:hover .portfolio-overlay {
+      opacity: 1;
+    }
+
+    .portfolio-actions {
+      display: flex;
+      gap: 15px;
+    }
+
+    .action-btn {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: #fff;
+      color: var(--primary-color);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      transition: 0.3s;
+    }
+
+    .action-btn:hover {
+      background: #fef08a;
+      transform: scale(1.1);
+    }
+
+    .portfolio-content {
+      padding: 25px;
+    }
+
+    .portfolio-meta {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 12px;
+    }
+
+    .portfolio-category {
+      color: var(--primary-color);
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    .portfolio-year {
+      color: var(--text-light);
+      font-size: 14px;
+    }
+
+    .portfolio-title {
+      font-size: 22px;
+      margin-bottom: 10px;
+      color: var(--text-dark);
+    }
+
+    .portfolio-description {
+      color: var(--text-light);
+      line-height: 1.6;
+      font-size: 15px;
     }
 
     /* Contact Section */
     .contact {
       padding: 80px 0;
-      background: #f8f9fa;
+      background: linear-gradient(to bottom, #f0fdfa, #ecfeff);
     }
 
     .info-item {
       background: #fff;
-      padding: 30px;
-      border-radius: 10px;
+      padding: 35px;
+      border-radius: 20px;
       margin-bottom: 30px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+      box-shadow: 0 10px 30px rgba(8, 145, 178, 0.1);
+      border: 2px solid rgba(8, 145, 178, 0.1);
     }
 
     .info-icon {
-      font-size: 32px;
-      color: var(--accent-color);
-      margin-bottom: 15px;
+      font-size: 40px;
+      color: var(--primary-color);
+      margin-bottom: 20px;
+    }
+
+    .info-content h4 {
+      font-size: 24px;
+      margin-bottom: 12px;
+      color: var(--text-dark);
     }
 
     .detail-item {
@@ -469,14 +711,21 @@
       gap: 15px;
       padding: 20px;
       background: #fff;
-      border-radius: 10px;
+      border-radius: 12px;
       margin-bottom: 15px;
-      box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+      box-shadow: 0 5px 15px rgba(8, 145, 178, 0.08);
+      border-left: 4px solid var(--primary-color);
+      transition: 0.3s;
+    }
+
+    .detail-item:hover {
+      transform: translateX(5px);
+      box-shadow: 0 8px 20px rgba(8, 145, 178, 0.15);
     }
 
     .detail-icon {
       font-size: 24px;
-      color: var(--accent-color);
+      color: var(--primary-color);
     }
 
     .detail-content {
@@ -486,20 +735,27 @@
 
     .detail-label {
       font-size: 13px;
-      color: #666;
+      color: var(--text-light);
       margin-bottom: 5px;
     }
 
     .detail-value {
       font-weight: 600;
-      color: #333;
+      color: var(--text-dark);
     }
 
     .form-wrapper {
       background: #fff;
       padding: 40px;
-      border-radius: 10px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(8, 145, 178, 0.1);
+      border: 2px solid rgba(8, 145, 178, 0.1);
+    }
+
+    .form-header h3 {
+      font-size: 26px;
+      margin-bottom: 25px;
+      color: var(--text-dark);
     }
 
     .form-group {
@@ -510,30 +766,32 @@
       display: block;
       margin-bottom: 8px;
       font-weight: 500;
-      color: #333;
+      color: var(--text-dark);
     }
 
     .form-group input,
     .form-group textarea {
       width: 100%;
-      padding: 12px 15px;
-      border: 1px solid #ddd;
-      border-radius: 5px;
+      padding: 14px 18px;
+      border: 2px solid rgba(8, 145, 178, 0.2);
+      border-radius: 10px;
       font-size: 15px;
       transition: 0.3s;
+      background: #f0fdfa;
     }
 
     .form-group input:focus,
     .form-group textarea:focus {
       outline: none;
-      border-color: var(--accent-color);
-      box-shadow: 0 0 0 3px rgba(5, 99, 187, 0.1);
+      border-color: var(--primary-color);
+      box-shadow: 0 0 0 4px rgba(8, 145, 178, 0.1);
+      background: #fff;
     }
 
     .submit-btn {
-      background: var(--accent-color);
+      background: var(--gradient-1);
       color: #fff;
-      padding: 12px 40px;
+      padding: 14px 40px;
       border: none;
       border-radius: 50px;
       font-weight: 600;
@@ -542,48 +800,61 @@
       display: flex;
       align-items: center;
       gap: 10px;
+      box-shadow: 0 8px 20px rgba(8, 145, 178, 0.3);
     }
 
     .submit-btn:hover {
-      background: #0678e3;
-      transform: translateY(-2px);
-      box-shadow: 0 5px 15px rgba(5, 99, 187, 0.3);
+      background: var(--gradient-2);
+      transform: translateY(-3px);
+      box-shadow: 0 12px 25px rgba(8, 145, 178, 0.4);
     }
 
     /* Footer */
     .footer {
-      background: #040b14;
+      background: var(--dark-bg);
       color: #fff;
-      padding: 30px 0;
+      padding: 40px 0;
       text-align: center;
     }
 
     .footer .sitename {
-      font-size: 24px;
+      font-size: 28px;
       font-weight: 700;
       margin-bottom: 15px;
+      background: var(--gradient-1);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .footer p {
+      color: rgba(255, 255, 255, 0.7);
+      margin-bottom: 20px;
     }
 
     .footer .social-links a {
-      font-size: 18px;
-      display: inline-block;
-      background: #212431;
-      color: #fff;
-      line-height: 1;
-      padding: 8px 0;
-      margin: 0 4px;
-      border-radius: 50%;
-      text-align: center;
-      width: 40px;
-      height: 40px;
-      transition: 0.3s;
+      font-size: 20px;
       display: inline-flex;
       align-items: center;
       justify-content: center;
+      background: rgba(8, 145, 178, 0.2);
+      color: #fff;
+      width: 45px;
+      height: 45px;
+      margin: 0 5px;
+      border-radius: 50%;
+      transition: 0.3s;
     }
 
     .footer .social-links a:hover {
-      background: var(--accent-color);
+      background: var(--primary-color);
+      transform: translateY(-5px);
+    }
+
+    .copyright {
+      color: rgba(255, 255, 255, 0.6);
+      margin-top: 20px;
+      font-size: 14px;
     }
 
     /* Scroll Top */
@@ -591,22 +862,24 @@
       position: fixed;
       visibility: hidden;
       opacity: 0;
-      right: 15px;
-      bottom: 15px;
+      right: 20px;
+      bottom: 20px;
       z-index: 99999;
-      background: var(--accent-color);
-      width: 44px;
-      height: 44px;
-      border-radius: 50px;
+      background: var(--gradient-1);
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
       transition: all 0.4s;
       display: flex;
       align-items: center;
       justify-content: center;
       color: #fff;
+      box-shadow: 0 8px 20px rgba(8, 145, 178, 0.4);
     }
 
     .scroll-top:hover {
-      background: #0678e3;
+      background: var(--gradient-2);
+      transform: translateY(-5px);
       color: #fff;
     }
 
@@ -636,6 +909,7 @@
         <li><a href="#about"><i class="bi bi-person navicon"></i> About</a></li>
         <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i> Resume</a></li>
         <li><a href="#skills"><i class="bi bi-hdd-stack navicon"></i> Skills</a></li>
+        <li><a href="#portfolio"><i class="bi bi-images navicon"></i> Portfolio</a></li>
         <li><a href="#contact"><i class="bi bi-envelope navicon"></i> Contact</a></li>
       </ul>
     </nav>
@@ -675,7 +949,7 @@
           </div>
         </div>
       </div>
-    </section><!-- /Hero Section -->
+    </section>
 
     <!-- About Section -->
     <section id="about" class="about section">
@@ -684,7 +958,7 @@
           <div class="col-lg-10">
             <div class="intro-header text-center" data-aos="fade-up" data-aos-delay="150">
               <h1>Hi, Saya Fadillah Al Musyaffa</h1>
-              <p class="subtitle">Fresh Graduate Matematika | Data Enthusiast</p>
+              <p class="subtitle">Matematika UIN Walisongo Semarang</p>
             </div>
 
             <div class="main-content-wrapper">
@@ -723,7 +997,7 @@
           </div>
         </div>
       </div>
-    </section><!-- /About Section -->
+    </section>
 
     <!-- Resume Section -->
     <section id="resume" class="resume section">
@@ -816,7 +1090,7 @@
           </div>
         </div>
       </div>
-    </section><!-- /Resume Section -->
+    </section>
 
     <!-- Skills Section -->
     <section id="skills" class="skills section">
@@ -828,114 +1102,159 @@
       <div class="container" data-aos="fade-up" data-aos-delay="100">
         <div class="row">
           <div class="col-lg-6">
-            <div class="skills-container">
-              <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
+            <div class="skills-container" data-aos="fade-up" data-aos-delay="200">
+              <div class="skill-category">
                 <div class="category-header">
                   <h3 class="category-title">Hard Skills</h3>
                   <p class="category-subtitle">Kemampuan teknis dalam pengolahan dan analisis data</p>
                 </div>
-                <div class="skills-list">
-                  <div class="skill-row">
-                    <div class="skill-info">
-                      <span class="skill-name">Microsoft Excel & Spreadsheet</span>
-                      <span class="skill-percentage">95%</span>
+                <ul class="skills-list">
+                  <li class="skill-item">
+                    <i class="bi bi-check-circle-fill"></i>
+                    <div>
+                      <strong>Microsoft Excel & Spreadsheet</strong>
+                      <span>Menguasai fitur Pivot Table, VLOOKUP, dan Conditional Formatting untuk analisis dan pengolahan data</span>
                     </div>
-                    <div class="progress">
-                      <div class="progress-bar" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                  </li>
+                  <li class="skill-item">
+                    <i class="bi bi-check-circle-fill"></i>
+                    <div>
+                      <strong>Analisis & Komputasi</strong>
+                      <span>Berpengalaman menggunakan MATLAB, SPSS, R Studio, Minitab, Tableau dan Python untuk analisis statistik dan visualisasi data</span>
                     </div>
-                  </div>
-                  <div class="skill-row">
-                    <div class="skill-info">
-                      <span class="skill-name">Data Verification & Analysis</span>
-                      <span class="skill-percentage">90%</span>
+                  </li>
+                  <li class="skill-item">
+                    <i class="bi bi-check-circle-fill"></i>
+                    <div>
+                      <strong>Data Verification</strong>
+                      <span>Terampil memeriksa kelengkapan dan keabsahan dokumen, menilai kesesuaian dengan standar, serta menentukan status approve atau reject</span>
                     </div>
-                    <div class="progress">
-                      <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                  </li>
+                  <li class="skill-item">
+                    <i class="bi bi-check-circle-fill"></i>
+                    <div>
+                      <strong>Microsoft Office & LaTeX</strong>
+                      <span>Terbiasa membuat laporan, dokumen, dan presentasi formal menggunakan Word, PowerPoint, dan LaTeX</span>
                     </div>
-                  </div>
-                  <div class="skill-row">
-                    <div class="skill-info">
-                      <span class="skill-name">Python, R Studio, MATLAB</span>
-                      <span class="skill-percentage">85%</span>
-                    </div>
-                    <div class="progress">
-                      <div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                  </div>
-                  <div class="skill-row">
-                    <div class="skill-info">
-                      <span class="skill-name">SPSS, Minitab, Tableau</span>
-                      <span class="skill-percentage">80%</span>
-                    </div>
-                    <div class="progress">
-                      <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                  </div>
-                  <div class="skill-row">
-                    <div class="skill-info">
-                      <span class="skill-name">Microsoft Office & LaTeX</span>
-                      <span class="skill-percentage">88%</span>
-                    </div>
-                    <div class="progress">
-                      <div class="progress-bar" role="progressbar" style="width: 88%" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                  </div>
-                </div>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
 
           <div class="col-lg-6">
-            <div class="skills-container">
-              <div class="skill-category" data-aos="fade-up" data-aos-delay="250">
+            <div class="skills-container" data-aos="fade-up" data-aos-delay="250">
+              <div class="skill-category">
                 <div class="category-header">
                   <h3 class="category-title">Soft Skills</h3>
                   <p class="category-subtitle">Kemampuan interpersonal dan profesional</p>
                 </div>
-                <div class="skills-list">
-                  <div class="skill-row">
-                    <div class="skill-info">
-                      <span class="skill-name">Kepemimpinan & Koordinasi Tim</span>
-                      <span class="skill-percentage">90%</span>
+                <ul class="skills-list">
+                  <li class="skill-item">
+                    <i class="bi bi-check-circle-fill"></i>
+                    <div>
+                      <strong>Kepemimpinan</strong>
+                      <span>Memimpin Divisi Magang Media dan menjembatani komunikasi antara tim magang dan pembimbing</span>
                     </div>
-                    <div class="progress">
-                      <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                  </li>
+                  <li class="skill-item">
+                    <i class="bi bi-check-circle-fill"></i>
+                    <div>
+                      <strong>Kreatif & Adaptif</strong>
+                      <span>Menulis naskah, menyusun jadwal syuting, serta berperan langsung dalam produksi video promosi</span>
                     </div>
-                  </div>
-                  <div class="skill-row">
-                    <div class="skill-info">
-                      <span class="skill-name">Teliti & Bertanggung Jawab</span>
-                      <span class="skill-percentage">95%</span>
+                  </li>
+                  <li class="skill-item">
+                    <i class="bi bi-check-circle-fill"></i>
+                    <div>
+                      <strong>Teliti & Bertanggung Jawab</strong>
+                      <span>Cermat dalam verifikasi dokumen dan memastikan hasil kerja akurat serta terdokumentasi dengan baik</span>
                     </div>
-                    <div class="progress">
-                      <div class="progress-bar" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                  </li>
+                  <li class="skill-item">
+                    <i class="bi bi-check-circle-fill"></i>
+                    <div>
+                      <strong>Komunikasi Efektif</strong>
+                      <span>Mampu menyampaikan ide dengan jelas serta menjaga koordinasi yang baik antara anggota tim dan pembimbing</span>
                     </div>
-                  </div>
-                  <div class="skill-row">
-                    <div class="skill-info">
-                      <span class="skill-name">Komunikasi Efektif</span>
-                      <span class="skill-percentage">88%</span>
-                    </div>
-                    <div class="progress">
-                      <div class="progress-bar" role="progressbar" style="width: 88%" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                  </div>
-                  <div class="skill-row">
-                    <div class="skill-info">
-                      <span class="skill-name">Kreatif & Adaptif</span>
-                      <span class="skill-percentage">85%</span>
-                    </div>
-                    <div class="progress">
-                      <div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                  </div>
-                </div>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section><!-- /Skills Section -->
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio section">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Portfolio</h2>
+        <p>Kumpulan project dan karya yang telah saya kerjakan</p>
+      </div>
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+
+          <div class="filters-wrapper" data-aos="fade-up" data-aos-delay="200">
+            <ul class="portfolio-filters isotope-filters">
+              <li data-filter="*" class="filter-active">Semua Project</li>
+              <li data-filter=".filter-data">Data Analysis</li>
+              <li data-filter=".filter-web">Web Development</li>
+              <li data-filter=".filter-other">Lainnya</li>
+            </ul>
+          </div>
+
+          <div class="row gy-5 portfolio-container isotope-container" data-aos="fade-up" data-aos-delay="300">
+
+            <div class="col-lg-6 portfolio-item isotope-item filter-data">
+              <div class="portfolio-card">
+                <div class="portfolio-image">
+                  <img src="https://via.placeholder.com/600x400?text=Project+1" class="img-fluid" alt="Project 1" loading="lazy">
+                  <div class="portfolio-overlay">
+                    <div class="portfolio-actions">
+                      <a href="https://via.placeholder.com/600x400?text=Project+1" class="glightbox action-btn preview-btn" title="Project 1"><i class="bi bi-eye"></i></a>
+                      <a href="#" class="action-btn details-btn" title="View Details"><i class="bi bi-arrow-up-right"></i></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="portfolio-content">
+                  <div class="portfolio-meta">
+                    <span class="portfolio-category">Data Analysis</span>
+                    <span class="portfolio-year">2024</span>
+                  </div>
+                  <h3 class="portfolio-title">Judul Project Anda</h3>
+                  <p class="portfolio-description">Deskripsi singkat tentang project yang telah dikerjakan. Jelaskan tools dan hasil yang dicapai.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-6 portfolio-item isotope-item filter-web">
+              <div class="portfolio-card">
+                <div class="portfolio-image">
+                  <img src="https://via.placeholder.com/600x400?text=Project+2" class="img-fluid" alt="Project 2" loading="lazy">
+                  <div class="portfolio-overlay">
+                    <div class="portfolio-actions">
+                      <a href="https://via.placeholder.com/600x400?text=Project+2" class="glightbox action-btn preview-btn" title="Project 2"><i class="bi bi-eye"></i></a>
+                      <a href="#" class="action-btn details-btn" title="View Details"><i class="bi bi-arrow-up-right"></i></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="portfolio-content">
+                  <div class="portfolio-meta">
+                    <span class="portfolio-category">Web Development</span>
+                    <span class="portfolio-year">2024</span>
+                  </div>
+                  <h3 class="portfolio-title">Judul Project Anda</h3>
+                  <p class="portfolio-description">Deskripsi singkat tentang project yang telah dikerjakan. Jelaskan tools dan hasil yang dicapai.</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- Contact Section -->
     <section id="contact" class="contact section">
@@ -1041,14 +1360,14 @@
           </div>
         </div>
       </div>
-    </section><!-- /Contact Section -->
+    </section>
 
   </main>
 
   <footer id="footer" class="footer">
     <div class="container">
       <h3 class="sitename">Fadillah Al Musyaffa</h3>
-      <p>Fresh Graduate Matematika | Data Enthusiast | Ready for New Opportunities</p>
+      <p>Fresh Graduate Matematika UIN Walisongo Semarang</p>
       <div class="social-links d-flex justify-content-center">
         <a href="https://linkedin.com/in/fadillah-al-musyaffa" target="_blank"><i class="bi bi-linkedin"></i></a>
         <a href="https://instagram.com/fdlh.almsyffa" target="_blank"><i class="bi bi-instagram"></i></a>
@@ -1061,16 +1380,14 @@
     </div>
   </footer>
 
-  <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
-  <!-- Vendor JS Files -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/glightbox/3.2.0/js/glightbox.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/isotope-layout/3.0.6/isotope.pkgd.min.js"></script>
 
   <script>
-    // Initialize AOS
     AOS.init({
       duration: 1000,
       easing: 'ease-in-out',
@@ -1078,7 +1395,6 @@
       mirror: false
     });
 
-    // Smooth scrolling
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -1092,7 +1408,6 @@
       });
     });
 
-    // Active nav on scroll
     window.addEventListener('scroll', () => {
       const sections = document.querySelectorAll('section[id]');
       const scrollY = window.pageYOffset;
@@ -1109,7 +1424,6 @@
         }
       });
 
-      // Scroll top button
       const scrollTop = document.querySelector('.scroll-top');
       if (scrollY > 100) {
         scrollTop.classList.add('active');
@@ -1118,31 +1432,10 @@
       }
     });
 
-    // Progress bar animation
-    const animateProgressBars = () => {
-      const progressBars = document.querySelectorAll('.progress-bar');
-      progressBars.forEach(bar => {
-        const width = bar.getAttribute('aria-valuenow');
-        bar.style.width = width + '%';
-      });
-    };
+    const glightbox = GLightbox({
+      selector: '.glightbox'
+    });
 
-    // Trigger progress animation when skills section is visible
-    const skillsSection = document.querySelector('#skills');
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          animateProgressBars();
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.3 });
-
-    if (skillsSection) {
-      observer.observe(skillsSection);
-    }
-
-    // Form submission
     document.querySelector('.contact-form')?.addEventListener('submit', function(e) {
       e.preventDefault();
       alert('Terima kasih! Pesan Anda telah dikirim. Saya akan segera menghubungi Anda.');
