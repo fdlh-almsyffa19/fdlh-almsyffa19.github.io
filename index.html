@@ -166,7 +166,7 @@
       padding: 80px 0;
       display: flex;
       align-items: center;
-      background: var(--gradient-2);
+      background: var(--gradient-1);
     }
 
     .hero .hero-content {
@@ -756,6 +756,27 @@
       font-weight: 500;
     }
 
+    .portfolio-filter-btn {
+      padding: 10px 25px;
+      margin: 5px;
+      border-radius: 50px;
+      background: linear-gradient(135deg, #f0fdfa, #ecfeff);
+      color: var(--primary-color);
+      font-weight: 500;
+      transition: 0.3s;
+      border: 2px solid var(--primary-color);
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .portfolio-filter-btn:hover,
+    .portfolio-filter-btn.active {
+      background: var(--gradient-1);
+      color: #fff;
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(8, 145, 178, 0.3);
+    }
+
     /* Contact Section */
     .contact {
       padding: 80px 0;
@@ -1070,17 +1091,56 @@
                     </div>
                   </div>
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-                <div class="certification-section" data-aos="fade-up" data-aos-delay="400">
-                  <h4>Pelatihan & Sertifikasi</h4>
-                  <div class="certifications">
-                    <div class="cert-item">
-                      <i class="bi bi-patch-check-fill"></i>
-                      <div class="cert-details">
-                        <span class="cert-name">Mini Course Data Analytics</span>
-                        <span class="cert-provider">RevoU • 2025</span>
-                      </div>
-                    </div>
+    <!-- Resume Section - Pengalaman Kerja -->
+    <section id="resume" class="resume section">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Pengalaman Kerja</h2>
+        <p>Pengalaman profesional saya di bidang media, verifikasi data, dan administrasi</p>
+      </div>
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row justify-content-center">
+          <div class="col-lg-10" data-aos="fade-up" data-aos-delay="200">
+            <div class="experience-timeline">
+              <div class="timeline-item" data-aos="fade-up" data-aos-delay="300">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                  <div class="position-meta">
+                    <span class="timeline-year">Maret 2024 - Oktober 2024</span>
+                  </div>
+                  <h3>PHL Staf Verifikasi Data dan Administrasi</h3>
+                  <h4>Pos Indonesia Regional IV & Bulog</h4>
+                  <p>Memeriksa 1.000+ dokumen kelengkapan dalam proses distribusi dan penyaluran bantuan beras serta program stunting dari Bulog melalui Pos Indonesia, dengan tingkat akurasi ±99%. Mengevaluasi kesesuaian dokumen dengan standar verifikasi dan menentukan status approve atau reject. Mencatat hasil verifikasi pada lembar kerja Excel sebagai dasar pelaporan dan tindak lanjut distribusi bantuan.</p>
+                  <div class="key-achievements">
+                    <span class="achievement-tag">Verifikasi Data</span>
+                    <span class="achievement-tag">Administrasi</span>
+                    <span class="achievement-tag">Excel</span>
+                    <span class="achievement-tag">Akurasi 99%</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="timeline-item" data-aos="fade-up" data-aos-delay="350">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                  <div class="position-meta">
+                    <span class="timeline-year">Januari 2024 - Februari 2024</span>
+                  </div>
+                  <h3>Intern Media</h3>
+                  <h4>Pos Indonesia Regional IV Semarang</h4>
+                  <p>Melakukan riset dan pendataan 50+ toko ekspor per hari, mencakup pelaku UMKM yang mengekspor produk ke luar negeri. Mengumpulkan informasi penting seperti alamat, kontak, email, nomor telepon, dan akun media sosial. Seluruh data direkap menggunakan Spreadsheet dan digunakan sebagai dasar kerja sama dan promosi layanan ekspor. Terlibat aktif dalam produksi 10+ konten video promosi layanan Pos Indonesia dengan peran utama dalam penulisan naskah (scriptwriting) dan penyusunan jadwal syuting.</p>
+                  <div class="key-achievements">
+                    <span class="achievement-tag">Riset Data</span>
+                    <span class="achievement-tag">Konten Produksi</span>
+                    <span class="achievement-tag">Spreadsheet</span>
+                    <span class="achievement-tag">Scriptwriting</span>
                   </div>
                 </div>
               </div>
@@ -1090,89 +1150,44 @@
       </div>
     </section>
 
-    <!-- Resume Section -->
-    <section id="resume" class="resume section">
+    <!-- Education & Certification Section -->
+    <section id="education" class="resume section" style="background: #fff;">
       <div class="container section-title" data-aos="fade-up">
-        <h2>Resume</h2>
-        <p>Pengalaman pendidikan dan profesional saya dalam bidang matematika dan analisis data</p>
+        <h2>Pendidikan & Sertifikasi</h2>
+        <p>Latar belakang pendidikan formal dan pelatihan profesional</p>
       </div>
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <div class="row align-items-start">
-          <div class="col-lg-6" data-aos="fade-right" data-aos-delay="200">
-            <div class="professional-journey">
-              <div class="section-intro">
-                <div class="icon-wrapper">
-                  <i class="bi bi-briefcase-fill"></i>
-                </div>
-                <h2>Pengalaman Kerja</h2>
-                <p>Pengalaman profesional saya di bidang media, verifikasi data, dan administrasi</p>
-              </div>
-
-              <div class="experience-timeline">
-                <div class="timeline-item" data-aos="fade-up" data-aos-delay="300">
-                  <div class="timeline-dot"></div>
-                  <div class="timeline-content">
-                    <div class="position-meta">
-                      <span class="timeline-year">Maret 2024 - Oktober 2024</span>
-                    </div>
-                    <h3>PHL Staf Verifikasi Data dan Administrasi</h3>
-                    <h4>Pos Indonesia Regional IV & Bulog</h4>
-                    <p>Memeriksa 1.000+ dokumen kelengkapan dalam proses distribusi dan penyaluran bantuan beras serta program stunting dari Bulog melalui Pos Indonesia, dengan tingkat akurasi ±99%. Mengevaluasi kesesuaian dokumen dengan standar verifikasi dan menentukan status approve atau reject.</p>
-                    <div class="key-achievements">
-                      <span class="achievement-tag">Verifikasi Data</span>
-                      <span class="achievement-tag">Administrasi</span>
-                      <span class="achievement-tag">Excel</span>
-                    </div>
+        <div class="row justify-content-center">
+          <div class="col-lg-10">
+            <div class="education-grid">
+              <div class="education-card primary" data-aos="zoom-in" data-aos-delay="200">
+                <div class="education-header">
+                  <div class="degree-icon">
+                    <i class="bi bi-award"></i>
+                  </div>
+                  <div class="degree-info">
+                    <h3>S1 Matematika</h3>
+                    <p class="institution">Universitas Islam Negeri Walisongo Semarang</p>
+                    <span class="graduation-year">Agustus 2021 - Juni 2025</span>
                   </div>
                 </div>
-
-                <div class="timeline-item" data-aos="fade-up" data-aos-delay="350">
-                  <div class="timeline-dot"></div>
-                  <div class="timeline-content">
-                    <div class="position-meta">
-                      <span class="timeline-year">Januari 2024 - Februari 2024</span>
-                    </div>
-                    <h3>Intern Media</h3>
-                    <h4>Pos Indonesia Regional IV Semarang</h4>
-                    <p>Melakukan riset dan pendataan 50+ toko ekspor per hari, mencakup pelaku UMKM yang mengekspor produk ke luar negeri. Terlibat aktif dalam produksi 10+ konten video promosi layanan Pos Indonesia.</p>
-                    <div class="key-achievements">
-                      <span class="achievement-tag">Riset Data</span>
-                      <span class="achievement-tag">Konten Produksi</span>
-                      <span class="achievement-tag">Spreadsheet</span>
-                    </div>
+                <div class="education-details">
+                  <p>Menyelesaikan program studi Matematika dengan fokus pada analisis data, statistik, dan komputasi matematika. Aktif dalam berbagai kegiatan akademik dan organisasi kampus.</p>
+                  <div class="honors">
+                    <span class="honor-badge">IPK: 3.44 (149 SKS)</span>
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
 
-          <div class="col-lg-6" data-aos="fade-left" data-aos-delay="200">
-            <div class="education-skills">
-              <div class="section-intro">
-                <div class="icon-wrapper">
-                  <i class="bi bi-mortarboard-fill"></i>
-                </div>
-                <h2>Pendidikan</h2>
-                <p>Latar belakang pendidikan formal dan prestasi akademik</p>
-              </div>
-
-              <div class="education-grid">
-                <div class="education-card primary" data-aos="zoom-in" data-aos-delay="300">
-                  <div class="education-header">
-                    <div class="degree-icon">
-                      <i class="bi bi-award"></i>
-                    </div>
-                    <div class="degree-info">
-                      <h3>S1 Matematika</h3>
-                      <p class="institution">Universitas Islam Negeri Walisongo Semarang</p>
-                      <span class="graduation-year">Agustus 2021 - Juni 2025</span>
-                    </div>
-                  </div>
-                  <div class="education-details">
-                    <p>Menyelesaikan program studi Matematika dengan fokus pada analisis data, statistik, dan komputasi matematika. Aktif dalam berbagai kegiatan akademik dan organisasi kampus.</p>
-                    <div class="honors">
-                      <span class="honor-badge">IPK: 3.44 (149 SKS)</span>
+              <div class="certification-section" data-aos="fade-up" data-aos-delay="300">
+                <h4>Pelatihan & Sertifikasi</h4>
+                <div class="certifications">
+                  <div class="cert-item">
+                    <i class="bi bi-patch-check-fill"></i>
+                    <div class="cert-details">
+                      <span class="cert-name">Mini Course Data Analytics</span>
+                      <span class="cert-provider">RevoU • 2025</span>
                     </div>
                   </div>
                 </div>
@@ -1285,10 +1300,18 @@
       </div>
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
-          <div class="row gy-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="filters-wrapper text-center mb-4" data-aos="fade-up" data-aos-delay="150">
+            <button class="portfolio-filter-btn active" data-filter="all">Semua Project</button>
+            <button class="portfolio-filter-btn" data-filter="project-1">Project 1</button>
+            <button class="portfolio-filter-btn" data-filter="project-2">Project 2</button>
+            <button class="portfolio-filter-btn" data-filter="project-3">Project 3</button>
+            <button class="portfolio-filter-btn" data-filter="project-4">Project 4</button>
+          </div>
+
+          <div class="row gy-4" id="portfolio-grid" data-aos="fade-up" data-aos-delay="200">
 
             <!-- Project 1: Pegadaian -->
-            <div class="col-lg-6 portfolio-item">
+            <div class="col-lg-6 portfolio-item" data-project="project-1">
               <div class="portfolio-card">
                 <div class="portfolio-image">
                   <img src="assets/img/portfolio/dashboard-transaksi.jpg" class="img-fluid" alt="Dashboard Transaksi Pegadaian" loading="lazy">
@@ -1314,7 +1337,7 @@
             </div>
 
             <!-- Project 2: Fashion Retail -->
-            <div class="col-lg-6 portfolio-item">
+            <div class="col-lg-6 portfolio-item" data-project="project-2">
               <div class="portfolio-card">
                 <div class="portfolio-image">
                   <img src="assets/img/portfolio/dashboard-fashion.jpg" class="img-fluid" alt="Dashboard Penjualan Fashion" loading="lazy">
@@ -1340,7 +1363,7 @@
             </div>
 
             <!-- Project 3: COVID-19 -->
-            <div class="col-lg-6 portfolio-item">
+            <div class="col-lg-6 portfolio-item" data-project="project-3">
               <div class="portfolio-card">
                 <div class="portfolio-image">
                   <img src="assets/img/portfolio/dashboard-covid.jpg" class="img-fluid" alt="Dashboard COVID-19" loading="lazy">
@@ -1366,7 +1389,7 @@
             </div>
 
             <!-- Project 4: US Flight -->
-            <div class="col-lg-6 portfolio-item">
+            <div class="col-lg-6 portfolio-item" data-project="project-4">
               <div class="portfolio-card">
                 <div class="portfolio-image">
                   <img src="assets/img/portfolio/dashboard-flight.jpg" class="img-fluid" alt="Dashboard Flight Delays" loading="lazy">
@@ -1504,17 +1527,15 @@
   </main>
 
   <footer id="footer" class="footer">
-    <div class="container">
+    <div class="container text-center">
       <h3 class="sitename">Fadillah Al Musyaffa</h3>
       <p>Fresh Graduate Matematika UIN Walisongo Semarang</p>
-      <div class="social-links d-flex justify-content-center">
+      <div class="social-links d-flex justify-content-center mb-3">
         <a href="https://linkedin.com/in/fadillah-al-musyaffa" target="_blank"><i class="bi bi-linkedin"></i></a>
         <a href="https://instagram.com/fdlh.almsyffa" target="_blank"><i class="bi bi-instagram"></i></a>
       </div>
-      <div class="container">
-        <div class="copyright">
-          <span>Copyright</span> <strong class="px-1 sitename">Fadillah Al Musyaffa</strong> <span>All Rights Reserved © 2025</span>
-        </div>
+      <div class="copyright">
+        <span>Copyright</span> <strong class="px-1 sitename">Fadillah Al Musyaffa</strong> <span>All Rights Reserved © 2025</span>
       </div>
     </div>
   </footer>
@@ -1572,6 +1593,33 @@
 
     const glightbox = GLightbox({
       selector: '.glightbox'
+    });
+
+    // Portfolio Filter
+    const filterBtns = document.querySelectorAll('.portfolio-filter-btn');
+    const portfolioItems = document.querySelectorAll('.portfolio-item');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        // Remove active class from all buttons
+        filterBtns.forEach(b => b.classList.remove('active'));
+        // Add active class to clicked button
+        btn.classList.add('active');
+
+        const filter = btn.getAttribute('data-filter');
+
+        portfolioItems.forEach(item => {
+          if (filter === 'all') {
+            item.style.display = 'block';
+          } else {
+            if (item.getAttribute('data-project') === filter) {
+              item.style.display = 'block';
+            } else {
+              item.style.display = 'none';
+            }
+          }
+        });
+      });
     });
 
     document.querySelector('.contact-form')?.addEventListener('submit', function(e) {
