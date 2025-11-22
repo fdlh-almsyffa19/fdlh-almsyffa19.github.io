@@ -1613,33 +1613,34 @@
         });
       });
     });
- 
+
+// Khusus untuk GitHub Pages – pasti masuk Formspree
 document.querySelector('.contact-form').addEventListener('submit', function(e) {
   e.preventDefault();
   
-  // Tambahan ini → muncul pop-up konfirmasi
-  if (!confirm('Kirim pesan ini sekarang?')) {
-    return; // kalau klik "Batal", berhenti di sini
-  }
+  if (!confirm('Kirim pesan sekarang?')) return;
 
   const btn = this.querySelector('.submit-btn');
   const old = btn.innerHTML;
-  btn.innerHTML = 'Mengirim...'; 
+  btn.innerHTML = 'Mengirim...';
   btn.disabled = true;
 
+  // Hapus header 'Accept' → ini yang diblok GitHub Pages
   fetch(this.action, {
     method: 'POST',
-    body: new FormData(this),
-    headers: { 'Accept': 'application/json' }
+    body: new FormData(this)
+    // ← sengaja nggak ada headers: { 'Accept': 'application/json' }
   })
   .then(() => {
-    alert('Terima kasih! Pesan sudah terkirim. Saya balas secepatnya 😊');
+    alert('Terima kasih! Pesan sudah terkirim. Saya balas secepatnya');
     this.reset();
   })
-  .catch(() => alert('Gagal terkirim. Langsung email aja ke fadil.2002.fam@gmail.com ya 🙏'))
-  .finally(() => { 
-    btn.innerHTML = old; 
-    btn.disabled = false; 
+  .catch(() => {
+    alert('Gagal terkirim. Langsung email aja ke fadil.2002.fam@gmail.com ya');
+  })
+  .finally(() => {
+    btn.innerHTML = old;
+    btn.disabled = false;
   });
 });
 </script>
