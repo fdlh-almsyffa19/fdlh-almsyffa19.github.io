@@ -1624,25 +1624,25 @@ document.querySelector('.contact-form').addEventListener('submit', function(e) {
   btn.innerHTML = 'Mengirim...';
   btn.disabled = true;
 
-  const formData = new FormData(this);
   const xhr = new XMLHttpRequest();
   xhr.open('POST', this.action);
   xhr.onload = function() {
-    if (xhr.status === 200) {
-      alert('Terima kasih! Pesan sudah terkirim. Saya balas secepatnya');
+
+    if (xhr.status >= 200 && xhr.status < 400) {
+      alert('Terima kasih! Pesan sudah terkirim. Saya balas secepatnya 😊');
       document.querySelector('.contact-form').reset();
     } else {
-      alert('Gagal terkirim. Langsung email ke fadil.2002.fam@gmail.com ya');
+      alert('Gagal terkirim. Langsung email aja ke fadil.2002.fam@gmail.com 🙏');
     }
     btn.innerHTML = old;
     btn.disabled = false;
   };
   xhr.onerror = function() {
-    alert('Koneksi error. Email langsung aja ke fadil.2012.fam@gmail.com');
+    alert('Koneksi error. Email langsung aja ya 🙏');
     btn.innerHTML = old;
     btn.disabled = false;
   };
-  xhr.send(formData);
+  xhr.send(new FormData(document.querySelector('.contact-form')));
 });
 </script>
 
