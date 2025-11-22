@@ -1616,33 +1616,25 @@
 
 document.querySelector('.contact-form').addEventListener('submit', function(e) {
   e.preventDefault();
-  
-  if (!confirm('Kirim pesan sekarang?')) return;
+
+  // Konfirmasi dulu
+  if (!confirm('Yakin kirim pesan ini sekarang?')) {
+    return; // klik Batal → stop
+  }
 
   const btn = this.querySelector('.submit-btn');
   const old = btn.innerHTML;
   btn.innerHTML = 'Mengirim...';
   btn.disabled = true;
 
-  const xhr = new XMLHttpRequest();
-  xhr.open('POST', this.action);
-  xhr.onload = function() {
+  this.submit();
 
-    if (xhr.status >= 200 && xhr.status < 400) {
-      alert('Terima kasih! Pesan sudah terkirim. Saya balas secepatnya 😊');
-      document.querySelector('.contact-form').reset();
-    } else {
-      alert('Gagal terkirim. Langsung email aja ke fadil.2002.fam@gmail.com 🙏');
-    }
+  setTimeout(() => {
+    alert('Terima kasih! Pesan sudah terkirim. Saya balas secepatnya 😊');
+    this.reset();
     btn.innerHTML = old;
     btn.disabled = false;
-  };
-  xhr.onerror = function() {
-    alert('Koneksi error. Email langsung aja ya 🙏');
-    btn.innerHTML = old;
-    btn.disabled = false;
-  };
-  xhr.send(new FormData(document.querySelector('.contact-form')));
+  }, 800);
 });
 </script>
 
