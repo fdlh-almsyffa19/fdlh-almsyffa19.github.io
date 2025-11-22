@@ -604,35 +604,6 @@
       background: #fff;
     }
 
-    .portfolio-filters {
-      list-style: none;
-      padding: 0;
-      margin: 0 0 40px 0;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-
-    .portfolio-filters li {
-      cursor: pointer;
-      padding: 10px 25px;
-      border-radius: 50px;
-      background: linear-gradient(135deg, #f0fdfa, #ecfeff);
-      color: var(--primary-color);
-      font-weight: 500;
-      transition: 0.3s;
-      border: 2px solid var(--primary-color);
-    }
-
-    .portfolio-filters li:hover,
-    .portfolio-filters .filter-active {
-      background: var(--gradient-1);
-      color: #fff;
-      transform: translateY(-2px);
-      box-shadow: 0 5px 15px rgba(8, 145, 178, 0.3);
-    }
-
     .portfolio-card {
       background: #fff;
       border-radius: 15px;
@@ -1173,7 +1144,7 @@
                 </div>
                 <div class="education-details">
                   <p>Menyelesaikan program studi Matematika dengan keunggulan pada Kriptografi, Matematika Komputasi, Algoritma dan Pemrograman, Logika Matematika, Teori Peluang, serta Statistika Matematika. Berpengalaman menggunakan MATLAB dan Python serta penulisan dokumen teknis dengan LaTeX.</p>
-</p> <p><strong>Skripsi:</strong>Implementasi Sandi Kotak Pada Kriptografi Caesar Cipher Untuk Proses Enkripsi Dan Dekripsi Menggunakan GUI MATLAB</p>
+                  <p><strong>Skripsi:</strong> Implementasi Sandi Kotak Pada Kriptografi Caesar Cipher Untuk Proses Enkripsi Dan Dekripsi Menggunakan GUI MATLAB</p>
                   <div class="honors">
                     <span class="honor-badge">IPK: 3.44 (149 SKS)</span>
                   </div>
@@ -1306,6 +1277,7 @@
             <button class="portfolio-filter-btn" data-filter="project-2">Project 2</button>
             <button class="portfolio-filter-btn" data-filter="project-3">Project 3</button>
             <button class="portfolio-filter-btn" data-filter="project-4">Project 4</button>
+            <button class="portfolio-filter-btn" data-filter="project-5">Project 5</button>
           </div>
 
           <div class="row gy-4" id="portfolio-grid" data-aos="fade-up" data-aos-delay="200">
@@ -1327,7 +1299,7 @@
                     <span class="portfolio-year">2025</span>
                   </div>
                   <h3 class="portfolio-title">Dashboard Interaktif Transaksi Produk Pegadaian</h3>
-                  <p class="portfolio-description">Visualisasi 100.000+ transaksi produk pegadaian (Tabungan Emas, Gadai Tab Emas, Gadai KCA, Arrum, dll) menggunakan Power BI. Menampilkan total transaksi per produk, channel (POS Syariah vs Digital), jenis transaksi (tebus, cicil, buyback), serta distribusi per region dan cabang di Indonesia.</p>
+                  <p class="portfolio-description">Visualisasi 100.000+ transaksi produk pegadaian (Tabungan Emas, Gadai Tab Emas, Gadai KCA, Arrum, dll) menggunakan Looker Studio. Menampilkan total transaksi per produk, channel (POS Syariah vs Digital), jenis transaksi (tebus, cicil, buyback), serta distribusi per region dan cabang di Indonesia.</p>
                   <div class="portfolio-tags">
                     <span class="tag">Looker Studio</span>
                   </div>
@@ -1410,6 +1382,32 @@
               </div>
             </div>
 
+            <!-- Project 5: Global Superstore -->
+            <div class="col-lg-6 portfolio-item" data-project="project-5">
+              <div class="portfolio-card">
+                <div class="portfolio-image">
+                  <img src="assets/img/portfolio/dashboard-superstore.jpg" class="img-fluid" alt="Dashboard Global Superstore" loading="lazy">
+                  <div class="portfolio-overlay">
+                    <div class="portfolio-actions">
+                      <a href="assets/img/portfolio/dashboard-superstore.jpg" class="glightbox action-btn preview-btn" title="Dashboard Global Superstore"><i class="bi bi-eye"></i></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="portfolio-content">
+                  <div class="portfolio-meta">
+                    <span class="portfolio-category">Business Intelligence</span>
+                    <span class="portfolio-year">2025</span>
+                  </div>
+                  <h3 class="portfolio-title">Dashboard Interaktif Global Superstore Sales</h3>
+                  <p class="portfolio-description">Dashboard penjualan Global Superstore (2003–2005) mencakup 7 kategori produk di 19 negara. Fully interactive dengan slicer, dropdown filter, dan dynamic chart. Fitur: Year-on-Year sales performance, country contribution, GeoChart visualization, dan detail transaksi dengan conditional formatting.</p>
+                  <div class="portfolio-tags">
+                    <span class="tag">Google Sheets</span>
+                    <span class="tag">Interactive Dashboard</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
           </div>
       </div>
     </section>
@@ -1483,7 +1481,7 @@
                 <h3>Kirim Pesan</h3>
               </div>
 
-              <form method="post" class="contact-form">
+              <form action="https://formspree.io/f/mrbdllzg" method="POST" class="contact-form">
                 <div class="row">
                   <div class="col-md-6">
                     <div class="form-group">
@@ -1597,9 +1595,7 @@
 
     filterBtns.forEach(btn => {
       btn.addEventListener('click', () => {
-        // Remove active class from all buttons
         filterBtns.forEach(b => b.classList.remove('active'));
-        // Add active class to clicked button
         btn.classList.add('active');
 
         const filter = btn.getAttribute('data-filter');
