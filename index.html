@@ -1617,9 +1617,9 @@
 document.querySelector('.contact-form').addEventListener('submit', function(e) {
   e.preventDefault();
 
-  // Konfirmasi dulu
+  // Konfirmasi
   if (!confirm('Yakin kirim pesan ini sekarang?')) {
-    return; // klik Batal → stop
+    return;
   }
 
   const btn = this.querySelector('.submit-btn');
@@ -1627,7 +1627,8 @@ document.querySelector('.contact-form').addEventListener('submit', function(e) {
   btn.innerHTML = 'Mengirim...';
   btn.disabled = true;
 
-  this.submit();
+  const formData = new FormData(this);
+  navigator.sendBeacon('https://formspree.io/f/mrbdllzg', formData);
 
   setTimeout(() => {
     alert('Terima kasih! Pesan sudah terkirim. Saya balas secepatnya 😊');
