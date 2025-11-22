@@ -1613,13 +1613,36 @@
         });
       });
     });
+ 
+document.querySelector('.contact-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+  
+  // Tambahan ini → muncul pop-up konfirmasi
+  if (!confirm('Kirim pesan ini sekarang?')) {
+    return; // kalau klik "Batal", berhenti di sini
+  }
 
-    document.querySelector('.contact-form')?.addEventListener('submit', function(e) {
-      e.preventDefault();
-      alert('Terima kasih! Pesan Anda telah dikirim. Saya akan segera menghubungi Anda.');
-      this.reset();
-    });
-  </script>
+  const btn = this.querySelector('.submit-btn');
+  const old = btn.innerHTML;
+  btn.innerHTML = 'Mengirim...'; 
+  btn.disabled = true;
+
+  fetch(this.action, {
+    method: 'POST',
+    body: new FormData(this),
+    headers: { 'Accept': 'application/json' }
+  })
+  .then(() => {
+    alert('Terima kasih! Pesan sudah terkirim. Saya balas secepatnya 😊');
+    this.reset();
+  })
+  .catch(() => alert('Gagal terkirim. Langsung email aja ke fadil.2002.fam@gmail.com ya 🙏'))
+  .finally(() => { 
+    btn.innerHTML = old; 
+    btn.disabled = false; 
+  });
+});
+</script>
 
 </body>
 </html>
