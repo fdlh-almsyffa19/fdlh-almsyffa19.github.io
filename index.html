@@ -1,0 +1,1687 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Fadillah Al Musyaffa - Portfolio</title>
+  <meta name="description" content="Portfolio Fadillah Al Musyaffa - Fresh Graduate Matematika UIN Walisongo Semarang">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.1/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/glightbox/3.2.0/css/glightbox.min.css" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary-color: #0891b2;
+      --secondary-color: #10b981;
+      --accent-color: #06b6d4;
+      --dark-bg: #0f172a;
+      --light-bg: #f0fdfa;
+      --text-dark: #1e293b;
+      --text-light: #64748b;
+      --gradient-1: linear-gradient(135deg, #0891b2 0%, #10b981 100%);
+      --gradient-2: linear-gradient(135deg, #06b6d4 0%, #3b82f6 100%);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      color: var(--text-dark);
+      background: linear-gradient(to bottom, #f0fdfa, #ecfeff);
+      font-family: 'Roboto', sans-serif;
+    }
+
+    a {
+      color: var(--primary-color);
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    a:hover {
+      color: var(--secondary-color);
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      color: var(--text-dark);
+      font-family: 'Raleway', sans-serif;
+    }
+
+    /* Header */
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: 300px;
+      transition: all ease-in-out 0.5s;
+      z-index: 997;
+      padding: 0 15px;
+      background: var(--gradient-1);
+      overflow-y: auto;
+      box-shadow: 4px 0 20px rgba(8, 145, 178, 0.2);
+    }
+
+    .header .profile-img img {
+      margin: 15px auto;
+      display: block;
+      width: 120px;
+      border: 5px solid rgba(255, 255, 255, 0.3);
+      border-radius: 50%;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .header .logo h1 {
+      font-size: 24px;
+      margin: 0 0 15px 0;
+      padding: 0;
+      font-weight: 700;
+      color: #fff;
+      text-align: center;
+    }
+
+    .header .social-links {
+      margin: 0 0 20px 0;
+      text-align: center;
+    }
+
+    .header .social-links a {
+      font-size: 16px;
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.2);
+      color: #fff;
+      line-height: 1;
+      padding: 8px 0;
+      margin: 0 2px;
+      border-radius: 50%;
+      text-align: center;
+      width: 36px;
+      height: 36px;
+      transition: 0.3s;
+    }
+
+    .header .social-links a:hover {
+      background: rgba(255, 255, 255, 0.4);
+      transform: translateY(-3px);
+    }
+
+    /* Navigation */
+    .navmenu ul {
+      list-style: none;
+      padding: 0 0 20px 0;
+    }
+
+    .navmenu a {
+      display: flex;
+      align-items: center;
+      color: rgba(255, 255, 255, 0.9);
+      padding: 12px 18px;
+      margin-bottom: 8px;
+      transition: 0.3s;
+      font-size: 15px;
+      border-radius: 50px;
+    }
+
+    .navmenu a i {
+      font-size: 20px;
+      padding-right: 8px;
+    }
+
+    .navmenu a:hover,
+    .navmenu .active {
+      color: #fff;
+      background: rgba(255, 255, 255, 0.2);
+      transform: translateX(5px);
+    }
+
+    /* Main */
+    .main {
+      margin-left: 300px;
+    }
+
+    @media (max-width: 1199px) {
+      .header {
+        left: -300px;
+      }
+      .main {
+        margin-left: 0;
+      }
+    }
+
+    /* Hero Section */
+    .hero {
+      width: 100%;
+      min-height: 100vh;
+      position: relative;
+      padding: 80px 0;
+      display: flex;
+      align-items: center;
+      background: var(--gradient-1);
+    }
+
+    .hero .hero-content {
+      color: #fff;
+    }
+
+    .hero h1 {
+      margin: 0 0 20px 0;
+      font-size: 48px;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .hero .accent-text {
+      color: #fef08a;
+    }
+
+    .hero p {
+      color: rgba(255, 255, 255, 0.95);
+      margin-bottom: 30px;
+      font-size: 18px;
+      line-height: 1.7;
+    }
+
+    .hero .btn-primary {
+      padding: 14px 35px;
+      border-radius: 50px;
+      background: #fff;
+      color: var(--primary-color);
+      font-weight: 600;
+      transition: 0.3s;
+      border: none;
+      margin-right: 15px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .hero .btn-primary:hover {
+      background: #fef08a;
+      color: var(--dark-bg);
+      transform: translateY(-3px);
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+    }
+
+    .hero .btn-secondary {
+      padding: 14px 35px;
+      border-radius: 50px;
+      background: transparent;
+      color: #fff;
+      font-weight: 600;
+      transition: 0.3s;
+      border: 2px solid #fff;
+    }
+
+    .hero .btn-secondary:hover {
+      background: #fff;
+      color: var(--primary-color);
+      transform: translateY(-3px);
+    }
+
+    .hero-image img {
+      width: 100%;
+      height: auto;
+      border-radius: 20px;
+      box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+      border: 5px solid rgba(255, 255, 255, 0.2);
+    }
+
+    /* About Section */
+    .about {
+      padding: 80px 0;
+      background: linear-gradient(to bottom, #ecfeff, #f0fdfa);
+    }
+
+    .about .intro-header h1 {
+      font-size: 42px;
+      margin-bottom: 15px;
+      color: var(--text-dark);
+    }
+
+    .about .subtitle {
+      font-size: 22px;
+      color: var(--primary-color);
+      margin-bottom: 40px;
+      font-weight: 500;
+    }
+
+    .about .profile-image-container img {
+      width: 100%;
+      border-radius: 15px;
+      box-shadow: 0 15px 35px rgba(8, 145, 178, 0.2);
+      border: 5px solid rgba(8, 145, 178, 0.1);
+    }
+
+    .about .location {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin: 15px 0;
+      color: var(--text-light);
+      font-size: 16px;
+    }
+
+    .about .location i {
+      color: var(--primary-color);
+      font-size: 20px;
+    }
+
+    .about .status {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--secondary-color);
+      font-weight: 500;
+    }
+
+    .about .status-indicator {
+      width: 10px;
+      height: 10px;
+      background: var(--secondary-color);
+      border-radius: 50%;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.5; }
+    }
+
+    .about .lead-text {
+      font-size: 19px;
+      line-height: 1.8;
+      margin-bottom: 20px;
+      color: var(--text-dark);
+    }
+
+    .about p {
+      line-height: 1.8;
+      color: var(--text-light);
+      margin-bottom: 15px;
+    }
+
+    /* Section Title */
+    .section-title {
+      text-align: center;
+      padding-bottom: 60px;
+    }
+
+    .section-title h2 {
+      font-size: 36px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      position: relative;
+      display: inline-block;
+      color: var(--text-dark);
+    }
+
+    .section-title h2::after {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 60px;
+      height: 4px;
+      background: var(--gradient-1);
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      border-radius: 2px;
+    }
+
+    .section-title p {
+      color: var(--text-light);
+      font-size: 16px;
+    }
+
+    /* Skills Section */
+    .skills {
+      padding: 80px 0;
+      background: #fff;
+    }
+
+    .skills-container {
+      background: linear-gradient(135deg, #f0fdfa 0%, #ecfeff 100%);
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(8, 145, 178, 0.1);
+      border: 2px solid rgba(8, 145, 178, 0.1);
+    }
+
+    .skill-category {
+      margin-bottom: 40px;
+    }
+
+    .category-header h3 {
+      font-size: 26px;
+      margin-bottom: 10px;
+      color: var(--primary-color);
+    }
+
+    .category-subtitle {
+      color: var(--text-light);
+      margin-bottom: 25px;
+      font-size: 15px;
+    }
+
+    .skills-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .skill-item {
+      padding: 15px 20px;
+      margin-bottom: 12px;
+      background: #fff;
+      border-radius: 12px;
+      border-left: 4px solid var(--primary-color);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      transition: 0.3s;
+    }
+
+    .skill-item:hover {
+      transform: translateX(5px);
+      box-shadow: 0 6px 20px rgba(8, 145, 178, 0.15);
+    }
+
+    .skill-item i {
+      color: var(--primary-color);
+      margin-right: 10px;
+      font-size: 18px;
+    }
+
+    .skill-item strong {
+      color: var(--text-dark);
+      display: block;
+      margin-bottom: 5px;
+      font-size: 16px;
+    }
+
+    .skill-item span {
+      color: var(--text-light);
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    /* Resume Section */
+    .resume {
+      padding: 80px 0;
+      background: linear-gradient(to bottom, #f0fdfa, #ecfeff);
+    }
+
+    .timeline-item {
+      padding-left: 35px;
+      position: relative;
+      margin-bottom: 40px;
+    }
+
+    .timeline-dot {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: var(--primary-color);
+      border: 4px solid #fff;
+      box-shadow: 0 0 0 3px rgba(8, 145, 178, 0.3);
+    }
+
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: 8px;
+      top: 22px;
+      bottom: -30px;
+      width: 2px;
+      background: linear-gradient(to bottom, var(--primary-color), var(--secondary-color));
+    }
+
+    .timeline-item:last-child::before {
+      display: none;
+    }
+
+    .timeline-year {
+      display: inline-block;
+      padding: 6px 16px;
+      background: var(--gradient-1);
+      color: #fff;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 12px;
+      box-shadow: 0 4px 10px rgba(8, 145, 178, 0.3);
+    }
+
+    .timeline-content h3 {
+      font-size: 22px;
+      margin-bottom: 8px;
+      color: var(--text-dark);
+    }
+
+    .timeline-content h4 {
+      font-size: 16px;
+      color: var(--primary-color);
+      margin-bottom: 15px;
+      font-weight: 600;
+    }
+
+    .timeline-content p {
+      line-height: 1.8;
+      color: var(--text-light);
+    }
+
+    .achievement-tag {
+      display: inline-block;
+      padding: 6px 16px;
+      background: linear-gradient(135deg, #ecfeff, #f0fdfa);
+      border: 1px solid var(--primary-color);
+      border-radius: 20px;
+      font-size: 13px;
+      margin: 5px 5px 0 0;
+      color: var(--primary-color);
+      font-weight: 500;
+    }
+
+    .education-card {
+      background: #fff;
+      padding: 35px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(8, 145, 178, 0.15);
+      border: 2px solid rgba(8, 145, 178, 0.1);
+      margin-bottom: 25px;
+    }
+
+    .education-card.primary {
+      background: linear-gradient(135deg, #f0fdfa 0%, #ecfeff 100%);
+      border: 2px solid var(--primary-color);
+    }
+
+    .degree-icon {
+      font-size: 40px;
+      color: var(--primary-color);
+      margin-bottom: 15px;
+    }
+
+    .degree-info h3 {
+      font-size: 24px;
+      margin-bottom: 8px;
+      color: var(--text-dark);
+    }
+
+    .institution {
+      color: var(--primary-color);
+      font-weight: 600;
+      font-size: 16px;
+      margin-bottom: 8px;
+    }
+
+    .graduation-year {
+      color: var(--text-light);
+      font-size: 14px;
+    }
+
+    .honor-badge {
+      display: inline-block;
+      padding: 8px 20px;
+      background: var(--gradient-1);
+      color: #fff;
+      border-radius: 25px;
+      font-weight: 600;
+      margin-top: 15px;
+      box-shadow: 0 4px 15px rgba(8, 145, 178, 0.3);
+    }
+
+    .certification-section {
+      margin-top: 30px;
+      padding: 25px;
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 5px 20px rgba(8, 145, 178, 0.1);
+      border-left: 4px solid var(--primary-color);
+    }
+
+    .certification-section h4 {
+      font-size: 20px;
+      margin-bottom: 20px;
+      color: var(--text-dark);
+    }
+
+    .certifications {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .cert-item {
+      display: flex;
+      align-items: start;
+      gap: 15px;
+      padding: 15px;
+      background: linear-gradient(135deg, #f0fdfa, #ecfeff);
+      border-radius: 12px;
+      transition: 0.3s;
+      border: 1px solid rgba(8, 145, 178, 0.2);
+    }
+
+    .cert-item:hover {
+      transform: translateX(5px);
+      box-shadow: 0 5px 15px rgba(8, 145, 178, 0.15);
+    }
+
+    .cert-item i {
+      font-size: 24px;
+      color: var(--primary-color);
+    }
+
+    .cert-details {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .cert-name {
+      font-weight: 600;
+      color: var(--text-dark);
+      font-size: 16px;
+    }
+
+    .cert-provider {
+      font-size: 14px;
+      color: var(--text-light);
+    }
+
+    /* Portfolio Section */
+    .portfolio {
+      padding: 80px 0;
+      background: #fff;
+    }
+
+    .portfolio-card {
+      background: #fff;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      transition: 0.3s;
+      margin-bottom: 30px;
+      border: 2px solid rgba(8, 145, 178, 0.1);
+    }
+
+    .portfolio-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(8, 145, 178, 0.2);
+    }
+
+    .portfolio-image {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .portfolio-image img {
+      width: 100%;
+      height: auto;
+      transition: 0.3s;
+    }
+
+    .portfolio-card:hover .portfolio-image img {
+      transform: scale(1.1);
+    }
+
+    .portfolio-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(8, 145, 178, 0.9);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: 0.3s;
+    }
+
+    .portfolio-card:hover .portfolio-overlay {
+      opacity: 1;
+    }
+
+    .portfolio-actions {
+      display: flex;
+      gap: 15px;
+    }
+
+    .action-btn {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: #fff;
+      color: var(--primary-color);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      transition: 0.3s;
+    }
+
+    .action-btn:hover {
+      background: #fef08a;
+      transform: scale(1.1);
+    }
+
+    .portfolio-content {
+      padding: 25px;
+    }
+
+    .portfolio-meta {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 12px;
+    }
+
+    .portfolio-category {
+      color: var(--primary-color);
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    .portfolio-year {
+      color: var(--text-light);
+      font-size: 14px;
+    }
+
+    .portfolio-title {
+      font-size: 22px;
+      margin-bottom: 10px;
+      color: var(--text-dark);
+    }
+
+    .portfolio-description {
+      color: var(--text-light);
+      line-height: 1.6;
+      font-size: 15px;
+      margin-bottom: 15px;
+    }
+
+    .portfolio-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 12px;
+    }
+
+    .portfolio-tags .tag {
+      display: inline-block;
+      padding: 5px 12px;
+      background: linear-gradient(135deg, #ecfeff, #f0fdfa);
+      border: 1px solid var(--primary-color);
+      border-radius: 15px;
+      font-size: 12px;
+      color: var(--primary-color);
+      font-weight: 500;
+    }
+
+    .portfolio-filter-btn {
+      padding: 10px 25px;
+      margin: 5px;
+      border-radius: 50px;
+      background: linear-gradient(135deg, #f0fdfa, #ecfeff);
+      color: var(--primary-color);
+      font-weight: 500;
+      transition: 0.3s;
+      border: 2px solid var(--primary-color);
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .portfolio-filter-btn:hover,
+    .portfolio-filter-btn.active {
+      background: var(--gradient-1);
+      color: #fff;
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(8, 145, 178, 0.3);
+    }
+
+    /* Contact Section */
+    .contact {
+      padding: 80px 0;
+      background: linear-gradient(to bottom, #f0fdfa, #ecfeff);
+    }
+
+    .info-item {
+      background: #fff;
+      padding: 35px;
+      border-radius: 20px;
+      margin-bottom: 30px;
+      box-shadow: 0 10px 30px rgba(8, 145, 178, 0.1);
+      border: 2px solid rgba(8, 145, 178, 0.1);
+    }
+
+    .info-icon {
+      font-size: 40px;
+      color: var(--primary-color);
+      margin-bottom: 20px;
+    }
+
+    .info-content h4 {
+      font-size: 24px;
+      margin-bottom: 12px;
+      color: var(--text-dark);
+    }
+
+    .detail-item {
+      display: flex;
+      align-items: start;
+      gap: 15px;
+      padding: 20px;
+      background: #fff;
+      border-radius: 12px;
+      margin-bottom: 15px;
+      box-shadow: 0 5px 15px rgba(8, 145, 178, 0.08);
+      border-left: 4px solid var(--primary-color);
+      transition: 0.3s;
+    }
+
+    .detail-item:hover {
+      transform: translateX(5px);
+      box-shadow: 0 8px 20px rgba(8, 145, 178, 0.15);
+    }
+
+    .detail-icon {
+      font-size: 24px;
+      color: var(--primary-color);
+    }
+
+    .detail-content {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .detail-label {
+      font-size: 13px;
+      color: var(--text-light);
+      margin-bottom: 5px;
+    }
+
+    .detail-value {
+      font-weight: 600;
+      color: var(--text-dark);
+    }
+
+    .form-wrapper {
+      background: #fff;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(8, 145, 178, 0.1);
+      border: 2px solid rgba(8, 145, 178, 0.1);
+    }
+
+    .form-header h3 {
+      font-size: 26px;
+      margin-bottom: 25px;
+      color: var(--text-dark);
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 500;
+      color: var(--text-dark);
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 14px 18px;
+      border: 2px solid rgba(8, 145, 178, 0.2);
+      border-radius: 10px;
+      font-size: 15px;
+      transition: 0.3s;
+      background: #f0fdfa;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--primary-color);
+      box-shadow: 0 0 0 4px rgba(8, 145, 178, 0.1);
+      background: #fff;
+    }
+
+    .submit-btn {
+      background: var(--gradient-1);
+      color: #fff;
+      padding: 14px 40px;
+      border: none;
+      border-radius: 50px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.3s;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 8px 20px rgba(8, 145, 178, 0.3);
+    }
+
+    .submit-btn:hover {
+      background: var(--gradient-2);
+      transform: translateY(-3px);
+      box-shadow: 0 12px 25px rgba(8, 145, 178, 0.4);
+    }
+
+    /* Footer */
+    .footer {
+      background: var(--dark-bg);
+      color: #fff;
+      padding: 40px 0;
+      text-align: center;
+    }
+
+    .footer .sitename {
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 15px;
+      background: var(--gradient-1);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .footer p {
+      color: rgba(255, 255, 255, 0.7);
+      margin-bottom: 20px;
+    }
+
+    .footer .social-links a {
+      font-size: 20px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(8, 145, 178, 0.2);
+      color: #fff;
+      width: 45px;
+      height: 45px;
+      margin: 0 5px;
+      border-radius: 50%;
+      transition: 0.3s;
+    }
+
+    .footer .social-links a:hover {
+      background: var(--primary-color);
+      transform: translateY(-5px);
+    }
+
+    .copyright {
+      color: rgba(255, 255, 255, 0.6);
+      margin-top: 20px;
+      font-size: 14px;
+    }
+
+    /* Scroll Top */
+    .scroll-top {
+      position: fixed;
+      visibility: hidden;
+      opacity: 0;
+      right: 20px;
+      bottom: 20px;
+      z-index: 99999;
+      background: var(--gradient-1);
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      transition: all 0.4s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      box-shadow: 0 8px 20px rgba(8, 145, 178, 0.4);
+    }
+
+    .scroll-top:hover {
+      background: var(--gradient-2);
+      transform: translateY(-5px);
+      color: #fff;
+    }
+
+    .scroll-top.active {
+      visibility: visible;
+      opacity: 1;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header id="header" class="header d-flex flex-column justify-content-between">
+    <div class="header-top">
+      <div class="profile-img">
+        <img src="assets/img/profile.jpg" alt="Fadillah Al Musyaffa">
+      </div>
+
+      <a href="index.html" class="logo d-flex align-items-center justify-content-center">
+        <h1 class="sitename">Fadillah Al Musyaffa</h1>
+      </a>
+    </div>
+
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i>Home</a></li>
+        <li><a href="#about"><i class="bi bi-person navicon"></i> About</a></li>
+        <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i> Resume</a></li>
+        <li><a href="#skills"><i class="bi bi-hdd-stack navicon"></i> Skills</a></li>
+        <li><a href="#portfolio"><i class="bi bi-images navicon"></i> Portfolio</a></li>
+        <li><a href="#contact"><i class="bi bi-envelope navicon"></i> Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="social-links text-center mt-4">
+  <a href="https://www.linkedin.com/in/fadillah-al-musyaffa" target="_blank" class="mx-1">
+    <i class="bi bi-linkedin fs-4"></i>
+  </a>
+  <a href="https://github.com/fdlh-almsyffa19" target="_blank" class="mx-1">
+    <i class="bi bi-github fs-4"></i>
+  </a>
+  <a href="https://instagram.com/fdlh.almsyffa" target="_blank" class="mx-1">
+    <i class="bi bi-instagram fs-4"></i>
+  </a>
+</div>
+  </header>
+
+  <main class="main">
+
+   <!-- Hero Section -->
+<section id="hero" class="hero section">
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+    <div class="row align-items-center">
+      <div class="col-lg-6 order-2 order-lg-1">
+        <div class="hero-content">
+          <h1 data-aos="fade-up" data-aos-delay="200">
+            Fresh Graduate
+            <span class="accent-text">Matematika</span>
+          </h1>
+          <p class="hero-description" data-aos="fade-up" data-aos-delay="300">
+            Lulusan S1 Matematika UIN Walisongo Semarang dengan ketertarikan di bidang analisis data dan pengolahan data. Memiliki pengalaman di Pos Indonesia dan Bulog dalam verifikasi data dan administrasi.
+          </p>
+
+<div class="hero-actions mt-4" data-aos="fade-up" data-aos-delay="400">
+  <div class="text-start mb-3">
+    <a href="#about" class="btn btn-primary btn-sm me-3">Tentang Saya</a>
+    <a href="#contact" class="btn btn-secondary btn-sm">Hubungi Saya</a>
+  </div>
+  <div class="ms-5 text-start">
+    <a href="assets/cv/Fadillah_Al_Musyaffa_CV.pdf" 
+       class="btn btn-primary shadow-sm" 
+       download>
+      <i class="bi bi-download me-2"></i>Download CV
+    </a>
+  </div>
+</div>
+        </div>
+      </div>
+
+      <div class="col-lg-6 order-1 order-lg-2">
+        <div class="hero-image" data-aos="fade-up" data-aos-delay="300">
+          <img src="assets/img/wisuda-hero.jpg" alt="Fadillah Al Musyaffa" class="img-fluid rounded shadow">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row justify-content-center">
+          <div class="col-lg-10">
+            <div class="intro-header text-center" data-aos="fade-up" data-aos-delay="150">
+              <h1>Hallo, Saya Fadillah Al Musyaffa</h1>
+              <p class="subtitle">Matematika UIN Walisongo Semarang</p>
+            </div>
+
+            <div class="main-content-wrapper">
+              <div class="row align-items-start">
+                <div class="col-lg-4" data-aos="fade-right" data-aos-delay="200">
+                  <div class="profile-section">
+                    <div class="profile-image-container">
+                      <img src="assets/img/wisuda-about.jpg" class="img-fluid" alt="Fadillah Al Musyaffa">
+                    </div>
+                    <div class="profile-meta">
+                      <div class="location">
+                        <i class="bi bi-geo-alt"></i>
+                        <span>Bekasi, Indonesia</span>
+                      </div>
+                      <div class="status">
+                        <div class="status-indicator"></div>
+                        <span>Terbuka untuk Peluang Kerja</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-8" data-aos="fade-left" data-aos-delay="250">
+                  <div class="content-area">
+                    <div class="story-block">
+                      <p class="lead-text">Saya lulusan S1 Program Studi Matematika UIN Walisongo Semarang dengan kemampuan analisis, ketelitian, dan komunikasi yang baik, serta memiliki manajemen waktu yang teratur.</p>
+
+                      <p>Terbiasa bekerja secara individu maupun dalam tim, mampu mengambil inisiatif, dan bertanggung jawab terhadap setiap tugas yang diberikan. Saya memiliki sikap jujur, disiplin, cepat beradaptasi, serta antusias mempelajari hal-hal baru untuk memberikan kontribusi positif di lingkungan kerja.</p>
+
+                      <p>Saya memiliki minat pada bidang analisis data, pengolahan data, dan administrasi, serta bersemangat untuk terus mengembangkan kemampuan profesional guna mendukung kinerja dan tujuan perusahaan.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Resume Section - Pengalaman Kerja -->
+    <section id="resume" class="resume section">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Pengalaman Kerja</h2>
+        <p>Pengalaman profesional saya di bidang media, verifikasi data, dan administrasi</p>
+      </div>
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row justify-content-center">
+          <div class="col-lg-10" data-aos="fade-up" data-aos-delay="200">
+            <div class="experience-timeline">
+              <div class="timeline-item" data-aos="fade-up" data-aos-delay="300">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                  <div class="position-meta">
+                    <span class="timeline-year">Maret 2024 - Oktober 2024</span>
+                  </div>
+                  <h3>PHL Staf Verifikasi Data dan Administrasi</h3>
+                  <h4>Pos Indonesia Regional IV & Bulog</h4>
+                  <p>Memeriksa 1.000+ dokumen kelengkapan dalam proses distribusi dan penyaluran bantuan beras serta program stunting dari Bulog melalui Pos Indonesia, dengan tingkat akurasi ±99%. Mengevaluasi kesesuaian dokumen dengan standar verifikasi dan menentukan status approve atau reject. Mencatat hasil verifikasi pada lembar kerja Excel sebagai dasar pelaporan dan tindak lanjut distribusi bantuan.</p>
+                  <div class="key-achievements">
+                    <span class="achievement-tag">Verifikasi Data</span>
+                    <span class="achievement-tag">Administrasi</span>
+		    <span class="achievement-tag">Google Sheets</span>
+                    <span class="achievement-tag">Excel</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="timeline-item" data-aos="fade-up" data-aos-delay="350">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                  <div class="position-meta">
+                    <span class="timeline-year">Januari 2024 - Februari 2024</span>
+                  </div>
+                  <h3>Intern Media</h3>
+                  <h4>Pos Indonesia Regional IV Semarang</h4>
+                  <p>Melakukan riset dan pendataan 50+ toko ekspor per hari, mencakup pelaku UMKM yang mengekspor produk ke luar negeri. Mengumpulkan informasi penting seperti alamat, kontak, email, nomor telepon, dan akun media sosial. Seluruh data direkap menggunakan Spreadsheet dan digunakan sebagai dasar kerja sama dan promosi layanan ekspor. Terlibat aktif dalam produksi konten video promosi layanan Pos Indonesia, dengan peran utama dalam penulisan naskah (scriptwriting), penyusunan jadwal syuting, serta berpartisipasi sebagai talent dalam video.</p>
+                  <div class="key-achievements">
+                    <span class="achievement-tag">Riset Data</span>
+                    <span class="achievement-tag">Konten Produksi</span>
+                    <span class="achievement-tag">Spreadsheet</span>
+                    <span class="achievement-tag">Scriptwriting</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education & Certification Section -->
+    <section id="education" class="resume section" style="background: #fff;">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Pendidikan & Sertifikasi</h2>
+        <p>Latar belakang pendidikan formal dan pelatihan profesional</p>
+      </div>
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row justify-content-center">
+          <div class="col-lg-10">
+            <div class="education-grid">
+              <div class="education-card primary" data-aos="zoom-in" data-aos-delay="200">
+                <div class="education-header">
+                  <div class="degree-icon">
+                    <i class="bi bi-award"></i>
+                  </div>
+                  <div class="degree-info">
+                    <h3>S1 Matematika</h3>
+                    <p class="institution">Universitas Islam Negeri Walisongo Semarang</p>
+                    <span class="graduation-year">Agustus 2021 - Juni 2025</span>
+                  </div>
+                </div>
+                <div class="education-details">
+                  <p>Menyelesaikan program studi Matematika dengan keunggulan pada Kriptografi, Matematika Komputasi, Algoritma dan Pemrograman, Logika Matematika, Teori Peluang, serta Statistika Matematika. Berpengalaman menggunakan MATLAB dan Python serta penulisan dokumen teknis dengan LaTeX.</p>
+                  <p><strong>Skripsi:</strong> Implementasi Sandi Kotak Pada Kriptografi Caesar Cipher Untuk Proses Enkripsi Dan Dekripsi Menggunakan GUI MATLAB</p>
+                  <div class="honors">
+                    <span class="honor-badge">IPK: 3.44 (149 SKS)</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="certification-section" data-aos="fade-up" data-aos-delay="300">
+                <h4>Pelatihan & Sertifikasi</h4>
+                <div class="certifications">
+                  <div class="cert-item">
+                    <i class="bi bi-patch-check-fill"></i>
+                    <div class="cert-details">
+                      <span class="cert-name">Mini Course Data Analytics</span>
+                      <span class="cert-provider">RevoU • 2025</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills section">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Skills</h2>
+        <p>Kemampuan teknis dan soft skills yang saya kuasai dalam bidang analisis data dan profesional</p>
+      </div>
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="skills-container" data-aos="fade-up" data-aos-delay="200">
+              <div class="skill-category">
+                <div class="category-header">
+                  <h3 class="category-title">Hard Skills</h3>
+                  <p class="category-subtitle">Kemampuan teknis dalam pengolahan dan analisis data</p>
+                </div>
+                <ul class="skills-list">
+                  <li class="skill-item">
+                    <i class="bi bi-check-circle-fill"></i>
+                    <div>
+                      <strong>Microsoft Excel & Spreadsheet</strong>
+                      <span>Menguasai fitur Pivot Table, VLOOKUP, dan Conditional Formatting untuk analisis dan pengolahan data</span>
+                    </div>
+                  </li>
+                  <li class="skill-item">
+                    <i class="bi bi-check-circle-fill"></i>
+                    <div>
+                      <strong>Analisis & Komputasi</strong>
+                      <span>Memiliki pengalaman menggunakan MATLAB, SPSS, R, Minitab, Looker, Tableau dan Python untuk analisis statistik dan visualisasi data</span>
+                    </div>
+                  </li>
+                  <li class="skill-item">
+                    <i class="bi bi-check-circle-fill"></i>
+                    <div>
+                      <strong>Data Verification</strong>
+                      <span>Terampil memeriksa kelengkapan dan keabsahan dokumen, menilai kesesuaian dengan standar, serta menentukan status approve atau reject</span>
+                    </div>
+                  </li>
+                  <li class="skill-item">
+                    <i class="bi bi-check-circle-fill"></i>
+                    <div>
+                      <strong>Microsoft Office & LaTeX</strong>
+                      <span>Terbiasa membuat laporan, dokumen, dan presentasi formal menggunakan Word, PowerPoint, dan LaTeX</span>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="skills-container" data-aos="fade-up" data-aos-delay="250">
+              <div class="skill-category">
+                <div class="category-header">
+                  <h3 class="category-title">Soft Skills</h3>
+                  <p class="category-subtitle">Kemampuan interpersonal dan profesional</p>
+                </div>
+                <ul class="skills-list">
+                  <li class="skill-item">
+                    <i class="bi bi-check-circle-fill"></i>
+                    <div>
+                      <strong>Kepemimpinan</strong>
+                      <span>Memimpin Divisi Magang Media dan menjembatani komunikasi antara tim magang dan pembimbing</span>
+                    </div>
+                  </li>
+                  <li class="skill-item">
+                    <i class="bi bi-check-circle-fill"></i>
+                    <div>
+                      <strong>Kreatif & Adaptif</strong>
+                      <span>Menulis naskah, menyusun jadwal syuting, serta berperan langsung dalam produksi video promosi</span>
+                    </div>
+                  </li>
+                  <li class="skill-item">
+                    <i class="bi bi-check-circle-fill"></i>
+                    <div>
+                      <strong>Teliti & Bertanggung Jawab</strong>
+                      <span>Cermat dalam verifikasi dokumen dan memastikan hasil kerja akurat serta terdokumentasi dengan baik</span>
+                    </div>
+                  </li>
+                  <li class="skill-item">
+                    <i class="bi bi-check-circle-fill"></i>
+                    <div>
+                      <strong>Komunikasi Efektif</strong>
+                      <span>Mampu menyampaikan ide dengan jelas serta menjaga koordinasi yang baik antara anggota tim dan pembimbing</span>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio section">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Portfolio</h2>
+        <p>Kumpulan dummy project data analysis dan visualization yang telah saya kerjakan</p>
+      </div>
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+          <div class="filters-wrapper text-center mb-4" data-aos="fade-up" data-aos-delay="150">
+            <button class="portfolio-filter-btn active" data-filter="all">Semua Project</button>
+            <button class="portfolio-filter-btn" data-filter="project-1">Project 1</button>
+            <button class="portfolio-filter-btn" data-filter="project-2">Project 2</button>
+            <button class="portfolio-filter-btn" data-filter="project-3">Project 3</button>
+            <button class="portfolio-filter-btn" data-filter="project-4">Project 4</button>
+            <button class="portfolio-filter-btn" data-filter="project-5">Project 5</button>
+	    <button class="portfolio-filter-btn" data-filter="project-6">Project 6</button>
+          </div>
+
+          <div class="row gy-4" id="portfolio-grid" data-aos="fade-up" data-aos-delay="200">
+
+         <!-- Project 1: Pegadaian -->
+<div class="col-lg-6 portfolio-item" data-project="project-1">
+  <div class="portfolio-card">
+    <div class="portfolio-image">
+      <img src="assets/img/portfolio/dashboard-transaksi.jpg" class="img-fluid" alt="Dashboard Transaksi Pegadaian" loading="lazy">
+      <div class="portfolio-overlay">
+        <div class="portfolio-actions">
+          <a href="assets/img/portfolio/dashboard-transaksi.jpg" class="glightbox action-btn preview-btn" title="Dashboard Transaksi Pegadaian"><i class="bi bi-eye"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="portfolio-content">
+      <div class="portfolio-meta">
+        <span class="portfolio-category">Business Intelligence</span>
+        <span class="portfolio-year">2025</span>
+      </div>
+      <h3 class="portfolio-title">Dashboard Interaktif Transaksi Pegadaian</h3>
+      <p class="portfolio-description">Dashboard transaksi Pegadaian yang mencakup 100 data produk, 11 jenis produk utama, 12 region, 47 area, dan 89 cabang. Fully interactive dengan filter Product, Area, dan jenis transaksi. Menampilkan total transaksi per produk & channel, distribusi jenis transaksi (Tebus, Cicil, Open Kredit, dll), serta perbandingan nilai transaksi antar region dan cabang.</p>
+      <div class="portfolio-tags">
+        <span class="tag">Looker Studio</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+            <!-- Project 2: Fashion Retail -->
+<div class="col-lg-6 portfolio-item" data-project="project-2">
+  <div class="portfolio-card">
+    <div class="portfolio-image">
+      <img src="assets/img/portfolio/dashboard-fashion.jpg" class="img-fluid" alt="Dashboard Penjualan Fashion Retail" loading="lazy">
+      <div class="portfolio-overlay">
+        <div class="portfolio-actions">
+          <a href="assets/img/portfolio/dashboard-fashion.jpg" class="glightbox action-btn preview-btn" title="Dashboard Penjualan Fashion Retail"><i class="bi bi-eye"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="portfolio-content">
+      <div class="portfolio-meta">
+        <span class="portfolio-category">Retail Analytics</span>
+        <span class="portfolio-year">2025</span>
+      </div>
+      <h3 class="portfolio-title">Dashboard Penjualan Multi-Brand Fashion Retail</h3>
+      <p class="portfolio-description">Interactive Excel dashboard penjualan 5 merek fashion (Adidos, Batu, Naik, Ngenes, Sekecer) sepanjang tahun 2022. Total keuntungan tertinggi Rp162,48 juta. Dilengkapi filter Bulan, Area (Jakarta, Bandung, Bali, Depok, Bogor), Kategori (Baju, Jaket, Sendal, Sepatu) dan Merek. Menampilkan trendline penjualan bulanan, persentase kontribusi keuntungan per cabang, serta perbandingan stok awal vs stok terjual per merek.</p>
+      <div class="portfolio-tags">
+        <span class="tag">Microsoft Excel</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+            <!-- Project 3: COVID-19 -->
+<div class="col-lg-6 portfolio-item" data-project="project-3">
+  <div class="portfolio-card">
+    <div class="portfolio-image">
+      <img src="assets/img/portfolio/dashboard-covid.jpg" class="img-fluid" alt="Dashboard COVID-19 Indonesia" loading="lazy">
+      <div class="portfolio-overlay">
+        <div class="portfolio-actions">
+          <a href="assets/img/portfolio/dashboard-covid.jpg" class="glightbox action-btn preview-btn" title="Dashboard COVID-19 Indonesia"><i class="bi bi-eye"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="portfolio-content">
+      <div class="portfolio-meta">
+        <span class="portfolio-category">Public Health Analytics</span>
+        <span class="portfolio-year">2025</span>
+      </div>
+      <h3 class="portfolio-title">Dashboard Monitoring COVID-19 di Indonesia</h3>
+      <p class="portfolio-description">Visualisasi lengkap pandemi COVID-19 Indonesia periode 1 Maret 2020 – 16 September 2022. Menampilkan total kasus 5.074.017.827, total kematian 9.216.722, total sembuh 4.749.798.246, peta interaktif per provinsi, tren tahunan kasus & kematian, case fatality rate (CFR) tertinggi tahun 2020, serta grafik total recovery rate 2020–2022.</p>
+      <div class="portfolio-tags">
+        <span class="tag">Tableau Public</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+            <!-- Project 4: US Flight Delay -->
+<div class="col-lg-6 portfolio-item" data-project="project-4">
+  <div class="portfolio-card">
+    <div class="portfolio-image">
+      <img src="assets/img/portfolio/dashboard-flight.jpg" class="img-fluid" alt="US Flight Delay Dashboard" loading="lazy">
+      <div class="portfolio-overlay">
+        <div class="portfolio-actions">
+          <a href="assets/img/portfolio/dashboard-flight.jpg" class="glightbox action-btn preview-btn" title="US Flight Delay Dashboard"><i class="bi bi-eye"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="portfolio-content">
+      <div class="portfolio-meta">
+        <span class="portfolio-category">Transportation Analytics</span>
+        <span class="portfolio-year">2025</span>
+      </div>
+      <h3 class="portfolio-title">Dashboard Keterlambatan Penerbangan Amerika Serikat</h3>
+      <p class="portfolio-description">Analisis keterlambatan penerbangan domestik AS periode Januari 2017 – Juli 2022. Total delay mencapai 38,6 juta menit (air delay), dengan rincian: Carrier 13,3 jt menit, Late Aircraft 14,5 jt menit, NAS 8,4 jt menit, Weather 2,1 jt menit. Dilengkapi peta interaktif bubble per state, ranking maskapai (WN, AA, OO, DL tertinggi), serta tren persentase delay maskapai 2017–2022.</p>
+      <div class="portfolio-tags">
+        <span class="tag">Tableau Public</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+            <!-- Project 5: Global Superstore -->
+<div class="col-lg-6 portfolio-item" data-project="project-5">
+  <div class="portfolio-card">
+    <div class="portfolio-image">
+      <img src="assets/img/portfolio/dashboard-superstore.jpg" class="img-fluid" alt="Global Superstore Sales Dashboard" loading="lazy">
+      <div class="portfolio-overlay">
+        <div class="portfolio-actions">
+          <a href="assets/img/portfolio/dashboard-superstore.jpg" class="glightbox action-btn preview-btn" title="Global Superstore Sales Dashboard"><i class="bi bi-eye"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="portfolio-content">
+      <div class="portfolio-meta">
+        <span class="portfolio-category">Business Intelligence</span>
+        <span class="portfolio-year">2025</span>
+      </div>
+      <h3 class="portfolio-title">Dashboard Interaktif Penjualan Global Superstore</h3>
+      <p class="portfolio-description">Interactive sales dashboard Global Superstore periode 2003–2005. Fully interactive menggunakan Google Sheets dengan filter Status (Shipped/Cancelled/etc) dan Product Line (Classic Cars, dll). Menampilkan total sales per product line, Year-on-Year performance 2003–2005, kontribusi penjualan per negara (USA 54,6 %, Australia 6 %, dll), peta dunia dengan heat color, serta tabel detail transaksi yang otomatis ter-update.</p>
+      <div class="portfolio-tags">
+        <span class="tag">Google Sheets</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Project 6: Supermarket Customer Revenue -->
+<div class="col-lg-6 portfolio-item" data-project="project-6">
+  <div class="portfolio-card">
+    <div class="portfolio-image">
+      <img src="assets/img/portfolio/dashboard-supermarket.jpg" class="img-fluid" alt="Supermarket Customer Revenue Dashboard" loading="lazy">
+      <div class="portfolio-overlay">
+        <div class="portfolio-actions">
+          <a href="assets/img/portfolio/dashboard-supermarket.jpg" class="glightbox action-btn preview-btn" title="Supermarket Customer Revenue Dashboard"><i class="bi bi-eye"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="portfolio-content">
+      <div class="portfolio-meta">
+        <span class="portfolio-category">Business Analytics</span>
+        <span class="portfolio-year">2025</span>
+      </div>
+      <h3 class="portfolio-title">Supermarket Customer Revenue Dashboard</h3>
+      <p class="portfolio-description">Interactive Excel dashboard dari dataset supermarket marketing campaign (2.240 pelanggan | 2012–2014). Fully interactive dengan Country slicer + monthly timeline. Insight utama: Spain menyumbang >60 % revenue, Wines & Meat ≈80 % penjualan, dan store tetap menjadi channel pembelian terbanyak.</p>
+      <div class="portfolio-tags">
+        <span class="tag">Microsoft Excel</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+      </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Hubungi Saya</h2>
+        <p>Mari berdiskusi tentang peluang kerja sama atau proyek yang bisa kita kerjakan bersama</p>
+      </div>
+
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-lg-5">
+            <div class="info-item">
+              <div class="info-icon">
+                <i class="bi bi-chat-dots"></i>
+              </div>
+              <div class="info-content">
+                <h4>Mari Terhubung</h4>
+                <p>Saya terbuka untuk diskusi mengenai peluang kerja, kolaborasi, atau sekadar berbagi pengalaman.</p>
+              </div>
+            </div>
+
+            <div class="contact-details">
+              <div class="detail-item">
+                <div class="detail-icon">
+                  <i class="bi bi-envelope-open"></i>
+                </div>
+                <div class="detail-content">
+                  <span class="detail-label">Email</span>
+                  <span class="detail-value">fadil.2002.fam@gmail.com</span>
+                </div>
+              </div>
+
+              <div class="detail-item">
+                <div class="detail-icon">
+                  <i class="bi bi-telephone-outbound"></i>
+                </div>
+                <div class="detail-content">
+                  <span class="detail-label">Telepon</span>
+                  <span class="detail-value">+62 895-3324-74940</span>
+                </div>
+              </div>
+
+              <div class="detail-item">
+                <div class="detail-icon">
+                  <i class="bi bi-geo-alt-fill"></i>
+                </div>
+                <div class="detail-content">
+                  <span class="detail-label">Lokasi</span>
+                  <span class="detail-value">Bekasi, Indonesia</span>
+                </div>
+              </div>
+
+              <div class="detail-item">
+                <div class="detail-icon">
+                  <i class="bi bi-linkedin"></i>
+                </div>
+                <div class="detail-content">
+                  <span class="detail-label">LinkedIn</span>
+                  <span class="detail-value">linkedin.com/in/fadillah-al-musyaffa</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-7">
+            <div class="form-wrapper">
+              <div class="form-header">
+                <h3>Kirim Pesan</h3>
+              </div>
+
+              <form action="https://formspree.io/f/mrbdllzg" method="POST" class="contact-form">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label>Nama Lengkap</label>
+                      <input type="text" name="name" required>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label>Email</label>
+                      <input type="email" name="email" required>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label>Subjek</label>
+                  <input type="text" name="subject" required>
+                </div>
+
+                <div class="form-group">
+                  <label>Pesan</label>
+                  <textarea name="message" rows="5" required></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">
+                  <span>Kirim Pesan</span>
+                  <i class="bi bi-arrow-right"></i>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer id="footer" class="footer">
+    <div class="container text-center">
+      <h3 class="sitename">Fadillah Al Musyaffa</h3>
+      <p>Matematika UIN Walisongo Semarang</p>
+      <div class="social-links d-flex justify-content-center mb-3">
+        <a href="https://linkedin.com/in/fadillah-al-musyaffa" target="_blank"><i class="bi bi-linkedin"></i></a>
+<a href="https://github.com/fdlh-almsyffa19" target="_blank"><i class="bi bi-github"></i></a>
+        <a href="https://instagram.com/fdlh.almsyffa" target="_blank"><i class="bi bi-instagram"></i></a>
+      </div>
+      <div class="copyright">
+        <span>Copyright</span> <strong class="px-1 sitename">Fadillah Al Musyaffa</strong> <span>All Rights Reserved © 2025</span>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/glightbox/3.2.0/js/glightbox.min.js"></script>
+
+  <script>
+    AOS.init({
+      duration: 1000,
+      easing: 'ease-in-out',
+      once: true,
+      mirror: false
+    });
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+
+    window.addEventListener('scroll', () => {
+      const sections = document.querySelectorAll('section[id]');
+      const scrollY = window.pageYOffset;
+
+      sections.forEach(section => {
+        const sectionHeight = section.offsetHeight;
+        const sectionTop = section.offsetTop - 100;
+        const sectionId = section.getAttribute('id');
+        const navLink = document.querySelector(`.navmenu a[href="#${sectionId}"]`);
+
+        if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+          document.querySelectorAll('.navmenu a').forEach(link => link.classList.remove('active'));
+          if (navLink) navLink.classList.add('active');
+        }
+      });
+
+      const scrollTop = document.querySelector('.scroll-top');
+      if (scrollY > 100) {
+        scrollTop.classList.add('active');
+      } else {
+        scrollTop.classList.remove('active');
+      }
+    });
+
+    const glightbox = GLightbox({
+      selector: '.glightbox'
+    });
+
+    // Portfolio Filter
+    const filterBtns = document.querySelectorAll('.portfolio-filter-btn');
+    const portfolioItems = document.querySelectorAll('.portfolio-item');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const filter = btn.getAttribute('data-filter');
+
+        portfolioItems.forEach(item => {
+          if (filter === 'all') {
+            item.style.display = 'block';
+          } else {
+            if (item.getAttribute('data-project') === filter) {
+              item.style.display = 'block';
+            } else {
+              item.style.display = 'none';
+            }
+          }
+        });
+      });
+    });
+
+document.querySelector('.contact-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+
+  // Konfirmasi
+  if (!confirm('Yakin kirim pesan ini sekarang?')) {
+    return;
+  }
+
+  const btn = this.querySelector('.submit-btn');
+  const old = btn.innerHTML;
+  btn.innerHTML = 'Mengirim...';
+  btn.disabled = true;
+
+  const formData = new FormData(this);
+  navigator.sendBeacon('https://formspree.io/f/mrbdllzg', formData);
+
+  setTimeout(() => {
+    alert('Terima kasih! Pesan sudah terkirim. Saya balas secepatnya 😊');
+    this.reset();
+    btn.innerHTML = old;
+    btn.disabled = false;
+  }, 800);
+});
+</script>
+
+</body>
+</html>
